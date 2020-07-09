@@ -1,26 +1,26 @@
-<?xml-stylesheet type="text/xsl" href="http://localhost:1313/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/zh-cn/categories/</loc>
+    <loc>/zh-cn/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/zh-cn/tags/</loc>
+    <loc>/zh-cn/tags/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/zh-cn/zh-cn/</loc>
+    <loc>/zh-cn/zh-cn/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/zh-cn/</loc>
+    <loc>/zh-cn/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

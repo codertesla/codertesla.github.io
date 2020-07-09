@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>VPS on 项目观察家</title>
-    <link>http://localhost:1313/tags/vps/</link>
+    <link>/tags/vps/</link>
     <description>Recent content in VPS on 项目观察家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>项目观察家</copyright>
     <lastBuildDate>Sat, 20 Jun 2020 07:09:21 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/vps/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/vps/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>0620：bandwagonhost 搬瓦工 VPS Affiliate推广联盟项目，22% CPS佣金</title>
-      <link>http://localhost:1313/0620.html</link>
+      <link>/0620.html</link>
       <pubDate>Sat, 20 Jun 2020 07:09:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/0620.html</guid>
+      <guid>/0620.html</guid>
       <description>➼ 前言 本文为“VPS项目”系列文章第三篇：搬瓦工VPS Affiliate项目。 ➼ 搬瓦工 VPS 联盟项目介绍 搬瓦工的名称，来自bandwagonho</description>
     </item>
     
     <item>
       <title>0619：SiteGround Hosting Affiliate推广联盟项目，最高 $100&#43; CPA佣金</title>
-      <link>http://localhost:1313/0619.html</link>
+      <link>/0619.html</link>
       <pubDate>Fri, 19 Jun 2020 13:22:24 +0000</pubDate>
       
-      <guid>http://localhost:1313/0619.html</guid>
+      <guid>/0619.html</guid>
       <description>➼ 前言 相对于国内VPS领域一家独大的阿里云，国外VPS不论是从规模、产品形式、价格、所在地区等都更加多种多样。 竞争激烈的VPS领域，向来在A</description>
     </item>
     
     <item>
       <title>0618：阿里云云大使推广奖励项目，最高 31% CPS 佣金</title>
-      <link>http://localhost:1313/0618.html</link>
+      <link>/0618.html</link>
       <pubDate>Thu, 18 Jun 2020 06:09:07 +0000</pubDate>
       
-      <guid>http://localhost:1313/0618.html</guid>
+      <guid>/0618.html</guid>
       <description>➼ 前言 VPS联盟项目，又称为 VPS Affiliate，一般为CPS或CPA型项目。目前国内VPS领域两大玩家：阿里云、腾讯云，都有其对应的VPS</description>
     </item>
     

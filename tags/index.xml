@@ -2,193 +2,193 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 项目观察家</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on 项目观察家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>项目观察家</copyright>
     <lastBuildDate>Sun, 28 Jun 2020 09:43:33 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CPA项目</title>
-      <link>http://localhost:1313/tags/cpa%E9%A1%B9%E7%9B%AE/</link>
+      <link>/tags/cpa%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Sun, 28 Jun 2020 09:43:33 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/cpa%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>/tags/cpa%E9%A1%B9%E7%9B%AE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>网站项目</title>
-      <link>http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E9%A1%B9%E7%9B%AE/</link>
+      <link>/tags/%E7%BD%91%E7%AB%99%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Sat, 27 Jun 2020 08:08:02 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/%E7%BD%91%E7%AB%99%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>/tags/%E7%BD%91%E7%AB%99%E9%A1%B9%E7%9B%AE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>被动收入</title>
-      <link>http://localhost:1313/tags/%E8%A2%AB%E5%8A%A8%E6%94%B6%E5%85%A5/</link>
+      <link>/tags/%E8%A2%AB%E5%8A%A8%E6%94%B6%E5%85%A5/</link>
       <pubDate>Tue, 23 Jun 2020 11:18:25 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/%E8%A2%AB%E5%8A%A8%E6%94%B6%E5%85%A5/</guid>
+      <guid>/tags/%E8%A2%AB%E5%8A%A8%E6%94%B6%E5%85%A5/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CPS</title>
-      <link>http://localhost:1313/tags/cps/</link>
+      <link>/tags/cps/</link>
       <pubDate>Sun, 21 Jun 2020 08:56:26 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/cps/</guid>
+      <guid>/tags/cps/</guid>
       <description></description>
     </item>
     
     <item>
       <title>加密货币</title>
-      <link>http://localhost:1313/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</link>
+      <link>/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</link>
       <pubDate>Sun, 21 Jun 2020 08:56:26 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</guid>
+      <guid>/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VPS</title>
-      <link>http://localhost:1313/tags/vps/</link>
+      <link>/tags/vps/</link>
       <pubDate>Sat, 20 Jun 2020 07:09:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/vps/</guid>
+      <guid>/tags/vps/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Netflix</title>
-      <link>http://localhost:1313/tags/netflix/</link>
+      <link>/tags/netflix/</link>
       <pubDate>Sun, 14 Jun 2020 04:50:59 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/netflix/</guid>
+      <guid>/tags/netflix/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SSL</title>
-      <link>http://localhost:1313/tags/ssl/</link>
+      <link>/tags/ssl/</link>
       <pubDate>Tue, 26 May 2020 08:56:17 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/ssl/</guid>
+      <guid>/tags/ssl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>抖音项目</title>
-      <link>http://localhost:1313/tags/%E6%8A%96%E9%9F%B3%E9%A1%B9%E7%9B%AE/</link>
+      <link>/tags/%E6%8A%96%E9%9F%B3%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Mon, 18 May 2020 07:56:47 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/%E6%8A%96%E9%9F%B3%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>/tags/%E6%8A%96%E9%9F%B3%E9%A1%B9%E7%9B%AE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>月入过万</title>
-      <link>http://localhost:1313/tags/%E6%9C%88%E5%85%A5%E8%BF%87%E4%B8%87/</link>
+      <link>/tags/%E6%9C%88%E5%85%A5%E8%BF%87%E4%B8%87/</link>
       <pubDate>Mon, 18 May 2020 07:56:47 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/%E6%9C%88%E5%85%A5%E8%BF%87%E4%B8%87/</guid>
+      <guid>/tags/%E6%9C%88%E5%85%A5%E8%BF%87%E4%B8%87/</guid>
       <description></description>
     </item>
     
     <item>
       <title>网盘资源类</title>
-      <link>http://localhost:1313/tags/%E7%BD%91%E7%9B%98%E8%B5%84%E6%BA%90%E7%B1%BB/</link>
+      <link>/tags/%E7%BD%91%E7%9B%98%E8%B5%84%E6%BA%90%E7%B1%BB/</link>
       <pubDate>Mon, 18 May 2020 07:56:47 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/%E7%BD%91%E7%9B%98%E8%B5%84%E6%BA%90%E7%B1%BB/</guid>
+      <guid>/tags/%E7%BD%91%E7%9B%98%E8%B5%84%E6%BA%90%E7%B1%BB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>自动发货</title>
-      <link>http://localhost:1313/tags/%E8%87%AA%E5%8A%A8%E5%8F%91%E8%B4%A7/</link>
+      <link>/tags/%E8%87%AA%E5%8A%A8%E5%8F%91%E8%B4%A7/</link>
       <pubDate>Mon, 18 May 2020 07:56:47 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/%E8%87%AA%E5%8A%A8%E5%8F%91%E8%B4%A7/</guid>
+      <guid>/tags/%E8%87%AA%E5%8A%A8%E5%8F%91%E8%B4%A7/</guid>
       <description></description>
     </item>
     
     <item>
       <title>零成本</title>
-      <link>http://localhost:1313/tags/%E9%9B%B6%E6%88%90%E6%9C%AC/</link>
+      <link>/tags/%E9%9B%B6%E6%88%90%E6%9C%AC/</link>
       <pubDate>Mon, 18 May 2020 07:56:47 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/%E9%9B%B6%E6%88%90%E6%9C%AC/</guid>
+      <guid>/tags/%E9%9B%B6%E6%88%90%E6%9C%AC/</guid>
       <description></description>
     </item>
     
     <item>
       <title>技术流</title>
-      <link>http://localhost:1313/tags/%E6%8A%80%E6%9C%AF%E6%B5%81/</link>
+      <link>/tags/%E6%8A%80%E6%9C%AF%E6%B5%81/</link>
       <pubDate>Sun, 17 May 2020 07:24:09 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/%E6%8A%80%E6%9C%AF%E6%B5%81/</guid>
+      <guid>/tags/%E6%8A%80%E6%9C%AF%E6%B5%81/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Youtube</title>
-      <link>http://localhost:1313/tags/youtube/</link>
+      <link>/tags/youtube/</link>
       <pubDate>Wed, 13 May 2020 08:50:44 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/youtube/</guid>
+      <guid>/tags/youtube/</guid>
       <description></description>
     </item>
     
     <item>
       <title>YouTube搬运</title>
-      <link>http://localhost:1313/tags/youtube%E6%90%AC%E8%BF%90/</link>
+      <link>/tags/youtube%E6%90%AC%E8%BF%90/</link>
       <pubDate>Wed, 13 May 2020 08:50:44 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/youtube%E6%90%AC%E8%BF%90/</guid>
+      <guid>/tags/youtube%E6%90%AC%E8%BF%90/</guid>
       <description></description>
     </item>
     
     <item>
       <title>大项目</title>
-      <link>http://localhost:1313/tags/%E5%A4%A7%E9%A1%B9%E7%9B%AE/</link>
+      <link>/tags/%E5%A4%A7%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Wed, 13 May 2020 08:50:44 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/%E5%A4%A7%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>/tags/%E5%A4%A7%E9%A1%B9%E7%9B%AE/</guid>
       <description></description>
     </item>
     
     <item>
       <title>视频搬运</title>
-      <link>http://localhost:1313/tags/%E8%A7%86%E9%A2%91%E6%90%AC%E8%BF%90/</link>
+      <link>/tags/%E8%A7%86%E9%A2%91%E6%90%AC%E8%BF%90/</link>
       <pubDate>Wed, 13 May 2020 08:50:44 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/%E8%A7%86%E9%A2%91%E6%90%AC%E8%BF%90/</guid>
+      <guid>/tags/%E8%A7%86%E9%A2%91%E6%90%AC%E8%BF%90/</guid>
       <description></description>
     </item>
     
     <item>
       <title>广告类</title>
-      <link>http://localhost:1313/tags/%E5%B9%BF%E5%91%8A%E7%B1%BB/</link>
+      <link>/tags/%E5%B9%BF%E5%91%8A%E7%B1%BB/</link>
       <pubDate>Fri, 01 May 2020 08:03:03 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/%E5%B9%BF%E5%91%8A%E7%B1%BB/</guid>
+      <guid>/tags/%E5%B9%BF%E5%91%8A%E7%B1%BB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>短视频</title>
-      <link>http://localhost:1313/tags/%E7%9F%AD%E8%A7%86%E9%A2%91/</link>
+      <link>/tags/%E7%9F%AD%E8%A7%86%E9%A2%91/</link>
       <pubDate>Fri, 01 May 2020 08:03:03 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/%E7%9F%AD%E8%A7%86%E9%A2%91/</guid>
+      <guid>/tags/%E7%9F%AD%E8%A7%86%E9%A2%91/</guid>
       <description></description>
     </item>
     

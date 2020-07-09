@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>加密货币 on 项目观察家</title>
-    <link>http://localhost:1313/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</link>
+    <link>/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/</link>
     <description>Recent content in 加密货币 on 项目观察家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>项目观察家</copyright>
     <lastBuildDate>Sun, 21 Jun 2020 08:56:26 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>0621：Binance币安 Affiliate推荐返佣项目，最高40%交易返佣</title>
-      <link>http://localhost:1313/0621.html</link>
+      <link>/0621.html</link>
       <pubDate>Sun, 21 Jun 2020 08:56:26 +0000</pubDate>
       
-      <guid>http://localhost:1313/0621.html</guid>
+      <guid>/0621.html</guid>
       <description>➼ 前言 本文为加密货币Affiliate项目之 Binance 币安推荐返佣项目。 ➼ 币安推荐返佣项目介绍 Binance，中文名 币安，是一家来自中国的加密货币交</description>
     </item>
     

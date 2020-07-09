@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>智商税 on 项目观察家</title>
-    <link>http://localhost:1313/tags/%E6%99%BA%E5%95%86%E7%A8%8E/</link>
+    <link>/tags/%E6%99%BA%E5%95%86%E7%A8%8E/</link>
     <description>Recent content in 智商税 on 项目观察家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>项目观察家</copyright>
     <lastBuildDate>Wed, 25 Mar 2020 03:29:42 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/%E6%99%BA%E5%95%86%E7%A8%8E/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/%E6%99%BA%E5%95%86%E7%A8%8E/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>0325：魔法蜡烛仪式项目，月入3万&#43;</title>
-      <link>http://localhost:1313/0325.html</link>
+      <link>/0325.html</link>
       <pubDate>Wed, 25 Mar 2020 03:29:42 +0000</pubDate>
       
-      <guid>http://localhost:1313/0325.html</guid>
+      <guid>/0325.html</guid>
       <description>今日黄历 2020.03.15 农历： 三月初二 宜：求医 裁衣 忌：伐木 捕鱼 前言 心想事成的秘密：来自西方的神秘魔法蜡烛仪式 魔法蜡烛仪式项目底层商业逻辑 使用西方魔法界专用</description>
     </item>
     
     <item>
       <title>0316：代诵佛经项目，月入过万</title>
-      <link>http://localhost:1313/0316.html</link>
+      <link>/0316.html</link>
       <pubDate>Mon, 16 Mar 2020 04:54:26 +0000</pubDate>
       
-      <guid>http://localhost:1313/0316.html</guid>
+      <guid>/0316.html</guid>
       <description>今日黄历 2020.03.16 农历： 二月廿三 宜： 日值岁破 忌： 大事不宜 前言 本人虽非正统佛弟子，未曾皈依，但参加过几次十日闭关禅修，所学禅修方法正是2500年前乔达</description>
     </item>
     
