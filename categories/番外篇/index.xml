@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>番外篇 on 项目观察家</title>
+    <link>http://localhost:1313/categories/%E7%95%AA%E5%A4%96%E7%AF%87/</link>
+    <description>Recent content in 番外篇 on 项目观察家</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>项目观察家</copyright>
+    <lastBuildDate>Tue, 21 Apr 2020 04:50:36 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/%E7%95%AA%E5%A4%96%E7%AF%87/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>0421：我接触过的VCC虚拟卡资源</title>
+      <link>http://localhost:1313/0421.html</link>
+      <pubDate>Tue, 21 Apr 2020 04:50:36 +0000</pubDate>
+      
+      <guid>http://localhost:1313/0421.html</guid>
+      <description>➼ 前言 今日介绍跟奈飞Netflix、Spotify相关的配套资源：VCC虚拟卡。 ➼ VCC虚拟卡基础入门知识 VCC = Virtual Credit Card，虚拟信用卡，简称</description>
+    </item>
+    
+    <item>
+      <title>0327：真的可以在 Pornhub.com 上赚到钱吗？</title>
+      <link>http://localhost:1313/0327.html</link>
+      <pubDate>Fri, 27 Mar 2020 03:58:12 +0000</pubDate>
+      
+      <guid>http://localhost:1313/0327.html</guid>
+      <description>郑重声明： 本文内容翻译自某国外网站，并对内容做适当删减编辑，原文网址附于文章底部； 本文不包含任何#NSFW内容，不会引起不适，但讨论的内容可</description>
+    </item>
+    
+  </channel>
+</rss>
