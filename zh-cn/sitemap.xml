@@ -1,26 +1,26 @@
-<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://uuatm.com/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>/zh-cn/categories/</loc>
+    <loc>https://uuatm.com/zh-cn/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>/zh-cn/tags/</loc>
+    <loc>https://uuatm.com/zh-cn/tags/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>/zh-cn/zh-cn/</loc>
+    <loc>https://uuatm.com/zh-cn/zh-cn/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>/zh-cn/</loc>
+    <loc>https://uuatm.com/zh-cn/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

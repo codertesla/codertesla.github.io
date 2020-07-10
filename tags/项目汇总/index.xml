@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>项目汇总 on 项目观察家</title>
-    <link>/tags/%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/</link>
+    <link>https://uuatm.com/tags/%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/</link>
     <description>Recent content in 项目汇总 on 项目观察家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>项目观察家</copyright>
     <lastBuildDate>Tue, 31 Mar 2020 13:59:44 +0000</lastBuildDate>
     
-	<atom:link href="/tags/%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://uuatm.com/tags/%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>0331：2020.03月 项目观察家 本月项目更新总结</title>
-      <link>/0331.html</link>
+      <link>https://uuatm.com/0331.html</link>
       <pubDate>Tue, 31 Mar 2020 13:59:44 +0000</pubDate>
       
-      <guid>/0331.html</guid>
+      <guid>https://uuatm.com/0331.html</guid>
       <description>本月项目基础数据 本月共31天。 《项目观察家》专栏3月7号建立，3月8号起正式更新每日项目，截止今天31号（不含），总计23天。知乎专栏《项目</description>
     </item>
     

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>技术相关 on 项目观察家</title>
-    <link>/categories/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/</link>
+    <link>https://uuatm.com/categories/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/</link>
     <description>Recent content in 技术相关 on 项目观察家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>项目观察家</copyright>
     <lastBuildDate>Sun, 14 Jun 2020 04:50:59 +0000</lastBuildDate>
     
-	<atom:link href="/categories/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://uuatm.com/categories/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>0614：Netflix奈飞设置简体中文字幕及界面语言的三种方法</title>
-      <link>/0614.html</link>
+      <link>https://uuatm.com/0614.html</link>
       <pubDate>Sun, 14 Jun 2020 04:50:59 +0000</pubDate>
       
-      <guid>/0614.html</guid>
+      <guid>https://uuatm.com/0614.html</guid>
       <description>➼ 前言 最近几天在 Netflix 奈飞上重温《纸房子》这部我最爱的剧。 由于我用的是台湾节点，导致Netflix的网站界面默认是繁体中文（在语言那里选择中文后</description>
     </item>
     
     <item>
       <title>0526：借助 DNSPod 在10分钟内免费申请一年期 TrustAsia SSL证书</title>
-      <link>/0526.html</link>
+      <link>https://uuatm.com/0526.html</link>
       <pubDate>Tue, 26 May 2020 08:56:17 +0000</pubDate>
       
-      <guid>/0526.html</guid>
+      <guid>https://uuatm.com/0526.html</guid>
       <description>➼ 前言 对于个人类型的博客、网站，部署一枚SSL证书，给网站加上一个小绿锁的标志，不但能提高用户信任度，而且还能在一定程度上提高网站排名。 目前</description>
     </item>
     
