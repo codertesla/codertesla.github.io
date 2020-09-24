@@ -1,3 +1,3 @@
 # codertesla.github.io
 
-Anohter github.io blog
+Another github.io blog
