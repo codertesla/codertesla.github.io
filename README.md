@@ -1,3 +1,3 @@
 # codertesla.github.io
 
-for UUATM.COM
+Anohter github.io blog
