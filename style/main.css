@@ -1484,7 +1484,7 @@ input[type=range]::-ms-thumb {
   content: ""; position: absolute; height: 12px; width: 1px; background-color: #390aa3; left: 50%;
 }
 
-.red-tick {
+.large-tick {
   left: 50%;
   position: absolute;
   -webkit-transform: translateX(-50%);
@@ -1494,3 +1494,128 @@ input[type=range]::-ms-thumb {
   font-size: 11px;
   font-weight: 600;
 }
+
+.connect-btn {
+  background: #fff;
+              display: flex;
+              align-items: center;
+              font-size: 16px;
+              padding: 8px;
+              border-radius: 7px;
+              font-weight: 500;
+              color: #000;
+              justify-content: space-between;
+              cursor: pointer;
+}
+
+.metamask-icon {
+  height: 18px; margin-right: 10px;
+}
+
+.dflex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.selected-amount {
+  color: hsla(0,0%,100%,.6);     font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 20px;
+}
+
+.mint-calculator {
+  background-color: #7b41ff;
+          max-width: 460px;
+          border-radius: 24px;
+          padding: 40px; margin-top: 24px;
+}
+
+.header {
+  display: flex; justify-content: space-between; margin-bottom: 30px;
+}
+
+.heading {
+  position: relative; font-size: 24px; font-weight: 600; margin-top: 14px; line-height: 30px;
+}
+
+.underline {
+  position: absolute;
+                bottom: -4px;
+                left: 0;
+}
+
+.amount {
+  font-style: normal;
+              font-weight: 700;
+              font-size: 44px;
+              line-height: 48px;
+}
+
+.remaining-h {
+  color: hsla(0,0%,100%,.6);     font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 20px;
+}
+
+.total-supply {
+  font-style: normal;
+              font-weight: 500;
+              font-size: 24px;
+}
+
+.slider {
+  margin: 60px 0; width: 100%;
+}
+
+#progress {
+  position: relative; height: 10px; width: 100%; background-color: #612bda; border-radius: 8px;
+}
+
+#progress-bar {
+  width: 100%; background: transparent; position: absolute; top: -6px;
+}
+
+.rular {
+  width: calc(100% + 56px); position: absolute; top: 12px; display: flex; margin: 0 -28px;
+}
+
+.small-tick {
+  left: 70%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;
+}
+
+.l-10 {
+  left: 10%;
+}
+
+.l-30 {
+  left: 30%;
+}
+
+.l-50 {
+  left: 50%;
+}
+
+.l-70 {
+  left: 70%;
+}
+
+.l-90 {
+  left: 90%;
+}
+
+
+
+

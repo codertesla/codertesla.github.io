@@ -91,17 +91,8 @@
             </li>
             <li class="u-nav-item">
               <!-- <button id="connect-button" style="background-color: #caff00; color: #000">Connectjj</button> -->
-              <span style="    background: #fff;
-              display: flex;
-              align-items: center;
-              font-size: 16px;
-              padding: 8px;
-              border-radius: 7px;
-              font-weight: 500;
-              color: #000;
-              justify-content: space-between;
-              cursor: pointer;">
-                <span><img style="height: 18px; margin-right: 10px;" src="https://cdn-icons-png.flaticon.com/512/235/235438.png"
+              <span class="connect-btn">
+                <span><img class="metamask-icon" src="/images/unnamed.jpg"
                     alt=""></span>
                 <span id="connect-button">Connect</span>
               </span>
@@ -135,18 +126,8 @@
                   <button id="connect-button" style="background-color: #caff00; color: #000">Connect</button>
                 </li>
 
-                <span style="    background: #fff;
-              display: flex;
-              align-items: center;
-              width: 132px;
-              font-size: 16px;
-              padding: 8px;
-              border-radius: 7px;
-              font-weight: 500;
-              color: #000;
-              justify-content: space-between;
-              cursor: pointer;">
-                <span><img style="height: 18px;" src="https://cdn-icons-png.flaticon.com/512/235/235438.png"
+                <span class="connect-btn">
+                <span><img class="metamask-icon" src="/images/unnamed.jpg"
                     alt=""></span>
                 <span id="connect-button">Connect</span>
               </span>
@@ -242,17 +223,10 @@
           <h1 class="u-custom-font u-font-roboto u-text u-text-2">
             <font color="#caff00">Mint</font>
           </h1>
-          <div style="    background-color: #7b41ff;
-          max-width: 460px;
-          border-radius: 24px;
-          padding: 40px;">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 30px;">
-              <span
-                style="position: relative; font-size: 24px; font-weight: 600; margin-top: 14px; line-height: 30px;">Mint
-                Your TNT <img style="
-                position: absolute;
-                bottom: -4px;
-                left: 0;" src="/images/calculator-marker.a704c3d8.svg" alt=""></span>
+          <div class="mint-calculator">
+            <div class="header">
+              <span class="heading">Mint
+                Your TNT <img class="underline" src="/images/calculator-marker.a704c3d8.svg" alt=""></span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5C6.20101 1.5 1.5 6.20101 1.5 12C1.5 17.799 6.20101 22.5 12 22.5ZM12 7.5C12.8284 7.5 13.5 6.82843 13.5 6C13.5 5.17157 12.8284 4.5 12 4.5C11.1716 4.5 10.5 5.17157 10.5 6C10.5 6.82843 11.1716 7.5 12 7.5ZM9.75 9C9.33579 9 9 9.33579 9 9.75C9 9.95539 9.0549 10.1052 9.14635 10.2143C9.3209 10.4226 9.53685 10.5947 9.74743 10.7625C10.1563 11.0884 10.5449 11.3982 10.5713 11.9251L10.8 16.5C10.8 17.3284 11.2498 18 12 18C12.7502 18 13.2 17.3284 13.2 16.5L13.5 10.5C13.5 9.67157 12.8284 9 12 9H9.75Z"
@@ -260,100 +234,82 @@
               </svg>
             </div>
 
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <div style="display: flex; flex-direction: column;">
-                <span style="color: hsla(0,0%,100%,.6);     font-style: normal;
-              font-weight: 400;
-              font-size: 14px;
-              line-height: 20px;">Amount to mint</span>
-                <span style="    font-style: normal;
-              font-weight: 700;
-              font-size: 44px;
-              line-height: 48px;" id="SelectedInput">1</span>
+            <div class="dflex align-items-center justify-content-between">
+              <div class="flex-direction-column dflex">
+                <span class="selected-amount">Amount to mint</span>
+                <span class="amount" id="SelectedInput">1</span>
               </div>
 
-              <div style="display: flex; flex-direction: column;">
-                <span style="color: hsla(0,0%,100%,.6);     font-style: normal;
-              font-weight: 400;
-              font-size: 14px;
-              line-height: 20px;">Remaining</span>
+              <div class="dflex flex-direction-column">
+                <span class="remaining-h">Remaining</span>
                 <span>
-                  <span style="    font-style: normal;
-              font-weight: 500;
-              font-size: 24px;" id="totalSupply"></span>
-                  <span style="    font-style: normal;
-              font-weight: 500;
-              font-size: 24px;" id="total"> / 6666</span>
+                  <span class="total-supply" id="totalSupply"></span>
+                  <span class="total-supply" id="total"> / 6666</span>
                 </span>
 
               </div>
             </div>
 
-            <div style="margin: 60px 0; width: 100%;">
-              <div id="progress"
-                style="position: relative; height: 10px; width: 100%; background-color: #612bda; border-radius: 8px;">
-                <input id="progress-bar" min="1" max="20"
-                  style="width: 100%; background: transparent; position: absolute; top: -6px;" type="range" value="1">
-                <div style="width: calc(100% + 56px); position: absolute; top: 12px; display: flex; margin: 0 -28px;">
+            <div class="slider">
+              <div id="progress">
+                <input id="progress-bar" min="1" max="20" type="range" value="1">
+                <div class="rular">
 
                   <div class="one-unit">
-                    <div class="red-tick">1</div>
-                    <div style="left: 70%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
+                    <div class="large-tick">1</div>
+                    <div class="small-tick l-70">
                     </div>
-                    <div style="left: 90%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
+                    <div class="small-tick l-90">
                     </div>
                   </div>
 
                   <div class="one-unit">
-                    <div style="left: 10%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
+                    <div class="small-tick l-10">
                     </div>
-                    <div style="left: 30%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
+                    <div class="small-tick l-30">
                     </div>
-                    <div class="red-tick">5</div>
-                    <div style="left: 70%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
+                    <div class="large-tick">5</div>
+                    <div class="small-tick l-70">
                     </div>
-                    <div style="left: 90%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
-                    </div>
-                  </div>
-                  <div class="one-unit">
-                    <div style="left: 10%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
-                    </div>
-                    <div style="left: 30%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
-                    </div>
-                    <div class="red-tick">10</div>
-                    <div style="left: 70%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
-                    </div>
-                    <div style="left: 90%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
+                    <div class="small-tick l-90">
                     </div>
                   </div>
                   <div class="one-unit">
-                    <div style="left: 10%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
+                    <div class="small-tick l-10">
                     </div>
-                    <div style="left: 30%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
+                    <div class="small-tick l-30">
                     </div>
-                    <div class="red-tick">15</div>
-                    <div style="left: 70%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
+                    <div class="large-tick">10</div>
+                    <div class="small-tick l-70">
                     </div>
-                    <div style="left: 90%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
+                    <div class="small-tick l-90">
                     </div>
                   </div>
                   <div class="one-unit">
-                    <div style="left: 10%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
+                    <div class="small-tick l-10">
                     </div>
-                    <div style="left: 30%; position: absolute; height: 6px; width: 1px; background-color: #390aa3;">
+                    <div class="small-tick l-30">
                     </div>
-                    <div class="red-tick">20</div>
+                    <div class="large-tick">15</div>
+                    <div class="small-tick l-70">
+                    </div>
+                    <div class="small-tick l-90">
+                    </div>
+                  </div>
+                  <div class="one-unit">
+                    <div class="small-tick l-10">
+                    </div>
+                    <div class="small-tick l-30">
+                    </div>
+                    <div class="large-tick">20</div>
                   </div>
                 </div>
               </div>
 
             </div>
 
-            <div style="display: flex; flex-direction: column;">
-              <span style="color: hsla(0,0%,100%,.6);     font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 20px;">Price</span>
+            <div class="dflex flex-direction-column">
+              <span class="selected-amount">Price</span>
               <span style="font-style: normal;
             font-weight: 700;
             font-size: 26px;
@@ -1200,7 +1156,8 @@
           })
           $('#message').text('Processing...');
         })
-        .on('receipt', function (confirmationNumber, receipt) {
+        .on('receipt', function (receipt) {
+          totalSupply_();
           $('#message-container').css('display', 'none');
           $('#message-container').css({
             'background': 'rgb(28 255 0 / 50%)',
@@ -1212,6 +1169,7 @@
             $('#message-container').css('display', 'none');
           }, 3000);
         }).on('error', function (error) {
+          totalSupply_
           $('#message-container').css('display', 'none');
           $('#message-container').css({
             'background': 'rgb(255 0 0 / 50%)',
