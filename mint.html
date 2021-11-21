@@ -92,8 +92,7 @@
             <li class="u-nav-item">
               <!-- <button id="connect-button" style="background-color: #caff00; color: #000">Connectjj</button> -->
               <span class="connect-btn">
-                <span><img class="metamask-icon" src="/images/unnamed.jpg"
-                    alt=""></span>
+                <span><img class="metamask-icon" src="/images/unnamed.jpg" alt=""></span>
                 <span id="connect-button">Connect</span>
               </span>
             </li>
@@ -122,15 +121,14 @@
                 <li class="u-nav-item">
                   <a class="u-button-style u-nav-link" href="#roadmap" style="padding: 10px 18px">Roadmap</a>
                 </li>
-                <li class="u-nav-item">
+                <!-- <li class="u-nav-item">
                   <button id="connect-button" style="background-color: #caff00; color: #000">Connect</button>
-                </li>
+                </li> -->
 
                 <span class="connect-btn">
-                <span><img class="metamask-icon" src="/images/unnamed.jpg"
-                    alt=""></span>
-                <span id="connect-button">Connect</span>
-              </span>
+                  <span><img class="metamask-icon" src="/images/unnamed.jpg" alt=""></span>
+                  <span id="connect-button" class="mobile-connect">Connect</span>
+                </span>
 
                 <!-- <li class="u-nav-item">
                   <a class="u-button-style u-nav-link" href="#opensea" style="padding: 10px 18px">Opensea</a>
@@ -234,7 +232,7 @@
               </svg>
             </div>
 
-            <div class="dflex align-items-center justify-content-between">
+            <div class="dflex justify-content-between">
               <div class="flex-direction-column dflex">
                 <span class="selected-amount">Amount to mint</span>
                 <span class="amount" id="SelectedInput">1</span>
@@ -361,8 +359,8 @@
               ">
             <div
               class="u-container-layout u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-2"> -->
-              <!-- <img class="u-align-center u-image u-image-default u-image-1" src="images/OpenSea-Full-Logolight.png" alt="" data-image-width="1311" data-image-height="300" data-href="https://opensea.io/collection/tntnft" data-target="_blank" /> -->
-              <!-- <center><input id="amount" value="1" placeholder="" style="width: 100px; font-size: 20px; color: #000;"
+          <!-- <img class="u-align-center u-image u-image-default u-image-1" src="images/OpenSea-Full-Logolight.png" alt="" data-image-width="1311" data-image-height="300" data-href="https://opensea.io/collection/tntnft" data-target="_blank" /> -->
+          <!-- <center><input id="amount" value="1" placeholder="" style="width: 100px; font-size: 20px; color: #000;"
                   oninput="mintCost();"></input></center>
               <a href="#mint"
                 class="u-border-1 u-border-custom-color-1 u-btn u-btn-round u-button-style u-custom-font u-font-open-sans u-grey-90 u-hover-custom-color-6 u-radius-50 u-text-custom-color-1 u-text-hover-grey-80 u-btn-1"
@@ -1134,6 +1132,8 @@
     }
 
 
+
+
     document.getElementById('mint-button').onclick = async function () {
       if (!window.contract) {
         await load();
@@ -1180,7 +1180,7 @@
           } else {
             $('#message').text('Minting Failed ' + error.message);
           }
-          
+
 
           setTimeout(() => {
             $('#message-container').css('display', 'none');
@@ -1205,6 +1205,10 @@
         $('#SelectedInput').text($('#progress-bar').val());
         mintCost();
       });
+
+      $('.connect-btn').click(async function () {
+        await getAccount();
+      });
     }
 
     async function loadWeb3() {
@@ -1221,7 +1225,8 @@
       const accounts = await ethereum.request({
         method: 'eth_requestAccounts'
       });
-      document.getElementById("connect-button").innerHTML = 'Connected';
+      $('.mobile-connect').text('Connected');
+      $('#connect-button').text('Connected')
       return accounts[0];
     }
 

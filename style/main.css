@@ -553,7 +553,9 @@
   .u-section-4 .u-line-1 {
     width: 320px;
   }
-}.u-section-5 .u-sheet-1 {
+}
+
+.u-section-5 .u-sheet-1 {
   min-height: 455px;
 }
 
@@ -1614,6 +1616,23 @@ input[type=range]::-ms-thumb {
 
 .l-90 {
   left: 90%;
+}
+
+@media(max-width: 425px) {
+  .rular {
+    width: calc(100% + 20px);
+    position: absolute;
+    top: 12px;
+    display: flex;
+    margin: 0 -10px;
+  }
+}
+
+@media(max-width: 320px) {
+  .mint-calculator {
+    padding: 20px;
+    width: 300px;
+  }
 }
 
 
