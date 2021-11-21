@@ -1635,6 +1635,21 @@ input[type=range]::-ms-thumb {
   }
 }
 
+#mint-button {
+  background: #fff;
+          border: none;
+          padding: 14px;
+          width: 100%;
+          color: #000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 12px;
+          font-size: 20px;
+          font-weight: 600;
+          margin-top: 30px; cursor: pointer;
+}
+
 
 
 
