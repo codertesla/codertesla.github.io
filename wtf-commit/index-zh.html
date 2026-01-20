@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WTF Commit ✨ | AI Git Commit Messages for VS Code</title>
+    <title>WTF Commit ✨ | VS Code AI Git 提交信息生成器</title>
     <link rel="icon" type="image/svg+xml" href="../logo.svg">
     <link rel="stylesheet" href="../index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
         }
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', "Microsoft YaHei", sans-serif;
         }
 
         h1, h2, h3 {
@@ -123,10 +123,10 @@
             </a>
             <nav style="display: flex; align-items: center; gap: 1.5rem;">
                 <ul style="display: flex; list-style: none; gap: 1.5rem; margin: 0; padding: 0;">
-                    <li><a href="../#projects">Projects</a></li>
+                    <li><a href="../#projects">项目</a></li>
                     <li><a href="https://github.com/codertesla/wtf-commit" target="_blank">GitHub</a></li>
                 </ul>
-                <a href="index-zh.html" class="lang-switch">中文</a>
+                <a href="index.html" class="lang-switch">EN</a>
             </nav>
         </div>
     </header>
@@ -136,44 +136,44 @@
         <section class="container" style="padding-top: 8rem; padding-bottom: 4rem; text-align: center;">
             <div style="max-width: 900px; margin: 0 auto;">
                 <div class="badge-list" style="justify-content: center;">
-                    <img src="https://img.shields.io/open-vsx/v/codertesla/wtf-commit" alt="VSX Version">
-                    <img src="https://img.shields.io/open-vsx/dt/codertesla/wtf-commit" alt="VSX Downloads">
-                    <img src="https://img.shields.io/github/stars/codertesla/wtf-commit?style=social" alt="GitHub Stars">
+                    <img src="https://img.shields.io/open-vsx/v/codertesla/wtf-commit" alt="VSX 版本">
+                    <img src="https://img.shields.io/open-vsx/dt/codertesla/wtf-commit" alt="VSX 下载量">
+                    <img src="https://img.shields.io/github/stars/codertesla/wtf-commit?style=social" alt="GitHub Star">
                 </div>
                 <h1 class="hero-title">WTF Commit ✨</h1>
                 <p style="font-size: 1.5rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 3rem; line-height: 1.6;">
-                    A minimalist VS Code extension that uses AI to generate concise and meaningful Git commit messages from your changes.
+                    极简主义的 VS Code 插件，利用 AI 从你的变更中生成简洁且有意义的 Git commit 信息。
                 </p>
                 <div style="display: flex; gap: 1.5rem; justify-content: center;">
-                    <a href="https://open-vsx.org/extension/codertesla/wtf-commit" target="_blank" class="btn">Install Now</a>
-                    <a href="https://github.com/codertesla/wtf-commit" target="_blank" class="btn btn-outline">Star on GitHub</a>
+                    <a href="https://open-vsx.org/extension/codertesla/wtf-commit" target="_blank" class="btn">立即安装</a>
+                    <a href="https://github.com/codertesla/wtf-commit" target="_blank" class="btn btn-outline">在 GitHub 上 Star</a>
                 </div>
             </div>
         </section>
 
         <!-- Advantages Section -->
         <section class="container" style="padding-bottom: 8rem;">
-            <h2 class="section-title">Core Advantages</h2>
+            <h2 class="section-title">核心优势</h2>
             <div class="advantage-grid">
                 <div class="feature-card">
                     <span class="advantage-icon">🤖</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Custom Models</h3>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">自定义模型</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
-                        Total freedom. Use any OpenAI-compatible provider (Ollama, DeepSeek, Moonshot, etc.) by adjusting the Base URL and Model name.
+                        完全自由。通过调整 Base URL 和模型名称，使用任何兼容 OpenAI 的提供商（Ollama, DeepSeek, Moonshot 等）。
                     </p>
                 </div>
                 <div class="feature-card">
                     <span class="advantage-icon">🌍</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Multi-Lingual</h3>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">多语言支持</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
-                        English, Chinese, Japanese, or even Classical Chinese. Want emojis only? Set a <b>Custom Language</b> and watch AI adapt.
+                        英语、中文、日语，甚至是文言文。只想用 Emoji？设置<b>自定义语言</b>，AI 会自动适应。
                     </p>
                 </div>
                 <div class="feature-card">
                     <span class="advantage-icon">⌨️</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Quick Shortcuts</h3>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">快捷键操作</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
-                        Generate and commit in one keystroke with <span class="shortcut">Cmd+Alt+G</span>. Supports chorded keybindings for power users.
+                        按下 <span class="shortcut">Cmd+Alt+G</span> 即可一键生成并提交。支持组合键绑定，适合高级用户。
                     </p>
                 </div>
             </div>
@@ -184,44 +184,44 @@
             <div class="container">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
                     <div>
-                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Full Automation <br><span style="color: var(--accent-purple);">Pipeline</span></h2>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">全自动化 <br><span style="color: var(--accent-purple);">流水线</span></h2>
                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.5rem;">
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
                                 <span style="color: var(--accent-cyan);">🚀</span>
                                 <div>
-                                    <h4 style="margin-bottom: 0.25rem;">Smart Diffing</h4>
-                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Automatically stages changes if none are staged, keeping you in the flow.</p>
+                                    <h4 style="margin-bottom: 0.25rem;">智能暂存 (Diffing)</h4>
+                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">如果没有暂存变更，将自动暂存，保持工作流顺畅。</p>
                                 </div>
                             </li>
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
                                 <span style="color: var(--accent-cyan);">🔄</span>
                                 <div>
-                                    <h4 style="margin-bottom: 0.25rem;">Auto Commit & Push</h4>
-                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Chain operations: generate, commit, and push sequentially without lifting your hands.</p>
+                                    <h4 style="margin-bottom: 0.25rem;">自动提交与推送</h4>
+                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">链式操作：按顺序完成生成、提交和推送，无需离开键盘。</p>
                                 </div>
                             </li>
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
                                 <span style="color: var(--accent-cyan);">📦</span>
                                 <div>
-                                    <h4 style="margin-bottom: 0.25rem;">Refactor Support</h4>
-                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Smart summaries for massive file renames, avoiding API context length issues.</p>
+                                    <h4 style="margin-bottom: 0.25rem;">重构支持</h4>
+                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">针对大规模文件重命名的智能总结，避免 API 上下文长度溢出。</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="feature-card" style="padding: 2.5rem;">
-                        <h3 style="margin-bottom: 2rem;">Supported Providers</h3>
+                        <h3 style="margin-bottom: 2rem;">支持的模型提供商</h3>
                         <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
                             <span class="provider-tag">OpenAI</span>
                             <span class="provider-tag">DeepSeek</span>
                             <span class="provider-tag">Moonshot (Kimi)</span>
-                            <span class="provider-tag">GLM (Zhipu)</span>
+                            <span class="provider-tag">GLM (智谱)</span>
                             <span class="provider-tag">Gemini</span>
                             <span class="provider-tag">OpenRouter</span>
-                            <span class="provider-tag">Ollama (Custom)</span>
+                            <span class="provider-tag">Ollama (自定义)</span>
                         </div>
                         <p style="margin-top: 2rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.4);">
-                            * Any OpenAI-compatible endpoint is supported via Custom Provider.
+                            * 通过“自定义提供商”支持任何兼容 OpenAI 的接口。
                         </p>
                     </div>
                 </div>
@@ -231,10 +231,10 @@
         <!-- CTA Section -->
         <section class="container" style="padding: 10rem 0 8rem; text-align: center;">
             <div class="feature-card" style="max-width: 800px; margin: 0 auto; padding: 4rem;">
-                <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Ready to level up?</h2>
-                <p style="margin-bottom: 3rem; color: rgba(255, 255, 255, 0.7);">Simplify your workflow and keep your Git history clean with AI.</p>
+                <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">准备好升级了吗？</h2>
+                <p style="margin-bottom: 3rem; color: rgba(255, 255, 255, 0.7);">利用 AI 简化工作流，保持 Git 历史轨迹清晰整洁。</p>
                 <div style="display: flex; gap: 1rem; justify-content: center;">
-                    <a href="https://open-vsx.org/extension/codertesla/wtf-commit" target="_blank" class="btn">Install on VS Code</a>
+                    <a href="https://open-vsx.org/extension/codertesla/wtf-commit" target="_blank" class="btn">在 VS Code 中安装</a>
                 </div>
             </div>
         </section>
@@ -246,13 +246,12 @@
                 <img src="../logo.svg" alt="Logo" style="width: 24px; height: 24px;">
                 <span style="font-size: 1rem;">CoderTesla</span>
             </a>
-            <p style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.4);">&copy; 2026 CoderTesla. All rights reserved.</p>
+            <p style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.4);">&copy; 2026 CoderTesla. 版权所有。</p>
             <div style="display: flex; gap: 2rem;">
                 <a href="https://github.com/codertesla/wtf-commit" target="_blank" style="color: rgba(255, 255, 255, 0.4); text-decoration: none;">GitHub</a>
-                <a href="../#projects" style="color: rgba(255, 255, 255, 0.4); text-decoration: none;">Projects</a>
+                <a href="../#projects" style="color: rgba(255, 255, 255, 0.4); text-decoration: none;">项目</a>
             </div>
         </div>
     </footer>
 </body>
 </html>
-
