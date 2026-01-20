@@ -3,12 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wtf-commit | AI Commit Messages</title>
+    <title>WTF Commit ✨ | AI Git Commit Messages for VS Code</title>
     <link rel="icon" type="image/svg+xml" href="../logo.svg">
     <link rel="stylesheet" href="../index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-font: 'Outfit', 'Inter', sans-serif;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--brand-font);
+            font-weight: 700;
+        }
+
+        .hero-title {
+            background: linear-gradient(135deg, #fff 0%, #a5f3fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: clamp(3rem, 8vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(12px);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 10px 30px -10px rgba(0, 255, 242, 0.2);
+        }
+
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .badge-list {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .provider-tag {
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .shortcut {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .advantage-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <div class="bg-blobs">
@@ -24,43 +107,135 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="../#projects">Back to Projects</a></li>
+                    <li><a href="../#projects">Projects</a></li>
                     <li><a href="https://github.com/codertesla/wtf-commit" target="_blank">GitHub</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container" style="padding-top: 8rem; padding-bottom: 8rem;">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <div class="tags">
-                <span class="tag">AI Tool</span>
-                <span class="tag">Productivity</span>
+    <main>
+        <!-- Hero Section -->
+        <section class="container" style="padding-top: 8rem; padding-bottom: 4rem; text-align: center;">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div class="badge-list" style="justify-content: center;">
+                    <img src="https://img.shields.io/open-vsx/v/codertesla/wtf-commit" alt="VSX Version">
+                    <img src="https://img.shields.io/open-vsx/dt/codertesla/wtf-commit" alt="VSX Downloads">
+                    <img src="https://img.shields.io/github/stars/codertesla/wtf-commit?style=social" alt="GitHub Stars">
+                </div>
+                <h1 class="hero-title">WTF Commit ✨</h1>
+                <p style="font-size: 1.5rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 3rem; line-height: 1.6;">
+                    A minimalist VS Code extension that uses AI to generate concise and meaningful Git commit messages from your changes.
+                </p>
+                <div style="display: flex; gap: 1.5rem; justify-content: center;">
+                    <a href="https://open-vsx.org/extension/codertesla/wtf-commit" target="_blank" class="btn">Install Now</a>
+                    <a href="https://github.com/codertesla/wtf-commit" target="_blank" class="btn btn-outline">Star on GitHub</a>
+                </div>
             </div>
-            <h1 style="font-size: 3.5rem; margin-bottom: 2rem;">wtf-commit</h1>
-            <p style="font-size: 1.25rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 3rem;">
-                Stop worrying about commit messages. <b>wtf-commit</b> leverages advanced AI to analyze your staged changes and generate meaningful, concise, and professional commit messages instantly.
-            </p>
+        </section>
 
-            <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 2rem; margin-bottom: 4rem;">
-                <h2 style="margin-bottom: 1.5rem; color: var(--accent-cyan);">Key Features</h2>
-                <ul style="list-style: none; display: grid; gap: 1rem;">
-                    <li>✨ <b>AI-Powered:</b> Understands the context of your code changes.</li>
-                    <li>⚡ <b>Instant:</b> Generates messages in seconds within VS Code.</li>
-                    <li>🛠️ <b>Configurable:</b> Adjust length, style, and more.</li>
-                    <li>🌑 <b>Minimalist:</b> No clutter, just the messages you need.</li>
-                </ul>
+        <!-- Advantages Section -->
+        <section class="container" style="padding-bottom: 8rem;">
+            <h2 class="section-title">Core Advantages</h2>
+            <div class="advantage-grid">
+                <div class="feature-card">
+                    <span class="advantage-icon">🤖</span>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Custom Models</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
+                        Total freedom. Use any OpenAI-compatible provider (Ollama, DeepSeek, Moonshot, etc.) by adjusting the Base URL and Model name.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="advantage-icon">🌍</span>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Multi-Lingual</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
+                        English, Chinese, Japanese, or even Classical Chinese. Want emojis only? Set a <b>Custom Language</b> and watch AI adapt.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="advantage-icon">⌨️</span>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Quick Shortcuts</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
+                        Generate and commit in one keystroke with <span class="shortcut">Cmd+Alt+G</span>. Supports chorded keybindings for power users.
+                    </p>
+                </div>
             </div>
+        </section>
 
-            <div style="display: flex; gap: 1rem;">
-                <a href="https://github.com/codertesla/wtf-commit" target="_blank" class="btn">View on GitHub</a>
-                <a href="../" class="btn btn-outline">All Projects</a>
+        <!-- Features Pipeline -->
+        <section style="background: rgba(255, 255, 255, 0.02); padding: 6rem 0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                    <div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Full Automation <br><span style="color: var(--accent-purple);">Pipeline</span></h2>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.5rem;">
+                            <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <span style="color: var(--accent-cyan);">🚀</span>
+                                <div>
+                                    <h4 style="margin-bottom: 0.25rem;">Smart Diffing</h4>
+                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Automatically stages changes if none are staged, keeping you in the flow.</p>
+                                </div>
+                            </li>
+                            <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <span style="color: var(--accent-cyan);">🔄</span>
+                                <div>
+                                    <h4 style="margin-bottom: 0.25rem;">Auto Commit & Push</h4>
+                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Chain operations: generate, commit, and push sequentially without lifting your hands.</p>
+                                </div>
+                            </li>
+                            <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <span style="color: var(--accent-cyan);">📦</span>
+                                <div>
+                                    <h4 style="margin-bottom: 0.25rem;">Refactor Support</h4>
+                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Smart summaries for massive file renames, avoiding API context length issues.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="feature-card" style="padding: 2.5rem;">
+                        <h3 style="margin-bottom: 2rem;">Supported Providers</h3>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                            <span class="provider-tag">OpenAI</span>
+                            <span class="provider-tag">DeepSeek</span>
+                            <span class="provider-tag">Moonshot (Kimi)</span>
+                            <span class="provider-tag">GLM (Zhipu)</span>
+                            <span class="provider-tag">Gemini</span>
+                            <span class="provider-tag">OpenRouter</span>
+                            <span class="provider-tag">Ollama (Custom)</span>
+                        </div>
+                        <p style="margin-top: 2rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.4);">
+                            * Any OpenAI-compatible endpoint is supported via Custom Provider.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="container" style="padding: 10rem 0 8rem; text-align: center;">
+            <div class="feature-card" style="max-width: 800px; margin: 0 auto; padding: 4rem;">
+                <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Ready to level up?</h2>
+                <p style="margin-bottom: 3rem; color: rgba(255, 255, 255, 0.7);">Simplify your workflow and keep your Git history clean with AI.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="https://open-vsx.org/extension/codertesla/wtf-commit" target="_blank" class="btn">Install on VS Code</a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="container">
-        <p>&copy; 2026 CoderTesla. Designed with passion for open source.</p>
+    <footer class="container" style="border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 4rem; padding-bottom: 4rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+            <a href="../" class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
+                <img src="../logo.svg" alt="Logo" style="width: 24px; height: 24px;">
+                <span style="font-size: 1rem;">CoderTesla</span>
+            </a>
+            <p style="font-size: 0.875rem; color: rgba(255, 255, 255, 0.4);">&copy; 2026 CoderTesla. All rights reserved.</p>
+            <div style="display: flex; gap: 2rem;">
+                <a href="https://github.com/codertesla/wtf-commit" target="_blank" style="color: rgba(255, 255, 255, 0.4); text-decoration: none;">GitHub</a>
+                <a href="../#projects" style="color: rgba(255, 255, 255, 0.4); text-decoration: none;">Projects</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
+
