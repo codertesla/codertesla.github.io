@@ -1,0 +1,15 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Body and Tail -->
+  <path d="M20,80 C20,80 15,60 25,45 C35,30 65,30 75,45 C85,60 80,80 80,80 L20,80 Z" fill="#4ade80" />
+  <!-- Head -->
+  <path d="M75,45 C85,35 95,45 85,55 L75,55 Z" fill="#4ade80" />
+  <!-- Eye -->
+  <circle cx="82" cy="48" r="2.5" fill="#030303" />
+  <!-- Dorsal Plates (Scales) -->
+  <path d="M35,35 L40,25 L45,35 Z" fill="#22c55e" />
+  <path d="M50,32 L55,22 L60,32 Z" fill="#22c55e" />
+  <path d="M65,35 L70,25 L75,35 Z" fill="#22c55e" />
+  <!-- Feet -->
+  <rect x="30" y="80" width="10" height="5" rx="2" fill="#4ade80" />
+  <rect x="60" y="80" width="10" height="5" rx="2" fill="#4ade80" />
+</svg>
