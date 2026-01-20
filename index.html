@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoderTesla | Portfolio</title>
+    <meta name="description" content="Portfolio of CoderTesla - Software Engineer and Open Source Developer. Showcasing AI tools, web automation, and more.">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header>
+        <div class="container" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+            <a href="/" class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
+                <img src="logo.svg" alt="Logo" style="width: 32px; height: 32px;">
+                <span>CoderTesla</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="https://github.com/codertesla" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Crafting Digital<br><span style="color: var(--accent-cyan)">Experiences with AI</span></h1>
+                <p>Developing minimalist tools and AI-driven solutions to enhance developer productivity and web experiences.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="#projects" class="btn">Explore Work</a>
+                    <a href="https://github.com/codertesla" target="_blank" class="btn btn-outline">GitHub Profile</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Selected Projects</h2>
+            <div class="project-grid">
+                <!-- wtf-commit -->
+                <div class="project-card">
+                    <div>
+                        <h3>wtf-commit</h3>
+                        <div class="tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">VS Code</span>
+                            <span class="tag">TypeScript</span>
+                        </div>
+                        <p>Minimalist VS Code extension that uses AI to generate concise and meaningful Git commit messages from staged changes.</p>
+                    </div>
+                    <a href="wtf-commit/" class="btn btn-outline">View Project</a>
+                </div>
+
+                <!-- EAR -->
+                <div class="project-card">
+                    <div>
+                        <h3>EAR</h3>
+                        <div class="tags">
+                            <span class="tag">Finance</span>
+                            <span class="tag">Tool</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <p>A real interest rate calculator for credit card installments, helping users understand the true cost of their spending.</p>
+                    </div>
+                    <a href="ear/" class="btn btn-outline">View Project</a>
+                </div>
+
+                <!-- SSLCheck -->
+                <div class="project-card">
+                    <div>
+                        <h3>SSLCheck</h3>
+                        <div class="tags">
+                            <span class="tag">Security</span>
+                            <span class="tag">CLI</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <p>A robust tool for checking SSL certificates, expiration dates, and security status of any web domain.</p>
+                    </div>
+                    <a href="sslcheck/" class="btn btn-outline">View Project</a>
+                </div>
+
+                <!-- PyVanity -->
+                <div class="project-card">
+                    <div>
+                        <h3>PyVanity</h3>
+                        <div class="tags">
+                            <span class="tag">Blockchain</span>
+                            <span class="tag">Ethereum</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <p>High-performance Ethereum vanity address generator powered by Python, simplifying custom wallet creation.</p>
+                    </div>
+                    <a href="pyvanity/" class="btn btn-outline">View Project</a>
+                </div>
+
+                <!-- Bilibili Blocker -->
+                <div class="project-card">
+                    <div>
+                        <h3>bilibili-1-click-blocker</h3>
+                        <div class="tags">
+                            <span class="tag">Userscript</span>
+                            <span class="tag">Bilibili</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <p>油猴脚本：B站首页和视频页一键拉黑UP主。Clean up your Bilibili feed by blocking unwanted content instantly.</p>
+                    </div>
+                    <a href="bilibili-1-click-blocker/" class="btn btn-outline">View Project</a>
+                </div>
+
+                <!-- Bilibili Speed Controller -->
+                <div class="project-card">
+                    <div>
+                        <h3>bilibili-video-speed-controller</h3>
+                        <div class="tags">
+                            <span class="tag">Userscript</span>
+                            <span class="tag">Bilibili</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <p>油猴脚本：B站视频倍速器。A powerful userscript to control video playback speed on Bilibili with ease.</p>
+                    </div>
+                    <a href="bilibili-video-speed-controller/" class="btn btn-outline">View Project</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2026 CoderTesla. Designed with passion for open source.</p>
+    </footer>
+</body>
+</html>
