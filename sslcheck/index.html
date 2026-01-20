@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSLCheck | Certificate Monitor</title>
+    <title>SSLCheck | SSL 证书状态监控工具</title>
     <link rel="icon" type="image/svg+xml" href="../logo.svg">
     <link rel="stylesheet" href="../index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@
             </a>
             <nav>
                 <ul>
-                    <li><a href="../#projects">Back to Projects</a></li>
+                    <li><a href="../#projects">返回项目</a></li>
                     <li><a href="https://github.com/codertesla/SSLCheck" target="_blank">GitHub</a></li>
                 </ul>
             </nav>
@@ -34,27 +34,35 @@
     <main class="container" style="padding-top: 8rem; padding-bottom: 8rem;">
         <div style="max-width: 800px; margin: 0 auto;">
             <div class="tags">
-                <span class="tag">Security</span>
+                <span class="tag">安全工具</span>
                 <span class="tag">Python</span>
             </div>
             <h1 style="font-size: 3.5rem; margin-bottom: 2rem;">SSLCheck</h1>
             <p style="font-size: 1.25rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 3rem;">
-                Keep your domains secure. <b>SSLCheck</b> is a robust Python CLI tool that monitors certificate validity, expiration, and issuer info to prevent downtime.
+                实时守护您的域名安全。<b>SSLCheck</b> 是一款功能强大的 Python 命令行工具，旨在帮助开发者和运维人员快速检查 SSL 证书状态，预防因证书过期导致的业务中断。
             </p>
 
-            <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 2rem; margin-bottom: 4rem;">
-                <h2 style="margin-bottom: 1.5rem; color: var(--accent-cyan);">Key Features</h2>
+            <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 2rem; margin-bottom: 2rem;">
+                <h2 style="margin-bottom: 1.5rem; color: var(--accent-cyan);">核心功能</h2>
                 <ul style="list-style: none; display: grid; gap: 1rem;">
-                    <li>🔐 <b>Multi-Domain:</b> Check multiple sites in one command.</li>
-                    <li>📅 <b>Expiry Alerts:</b> Stay ahead of certificate renewals.</li>
-                    <li>📜 <b>Issuer Details:</b> Get full transparency on cert chains.</li>
-                    <li>🤖 <b>Automation Ready:</b> Easy to integrate into CI/CD pipelines.</li>
+                    <li>🔐 <b>多域名支持:</b> 支持在单次命令中同时检查多个网站的证书状态。</li>
+                    <li>🌍 <b>自定义端口:</b> 完美支持非标准端口（如 example.com:8443）的证书检查。</li>
+                    <li>📅 <b>详尽信息:</b> 清晰展示证书的生效时间、过期时间、剩余有效天数及颁发机构。</li>
+                    <li>🤖 <b>自动化友好:</b> 具备完善的错误处理和日志记录机制，轻松集成至 CI/CD 流。</li>
+                    <li>🌐 <b>智能语言:</b> 支持中英文界面，根据系统语言环境自动切换，使用无障碍。</li>
                 </ul>
             </div>
 
+            <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 20px; padding: 2rem; margin-bottom: 4rem;">
+                <h2 style="margin-bottom: 1.5rem; color: var(--accent-cyan);">为什么选择 SSLCheck？</h2>
+                <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.6;">
+                    在 HTTPS 普及的今天，SSL 证书管理已成为运维的核心环节。SSLCheck 不仅简单轻便，更专注于解决“痛点”：它能优雅地处理无效域名、连接超时和验证失败等各种异常情况。无需复杂配置，只需一行命令，即可让您的证书风险尽在掌握。
+                </p>
+            </div>
+
             <div style="display: flex; gap: 1rem;">
-                <a href="https://github.com/codertesla/SSLCheck" target="_blank" class="btn">View on GitHub</a>
-                <a href="../" class="btn btn-outline">All Projects</a>
+                <a href="https://github.com/codertesla/SSLCheck" target="_blank" class="btn">GitHub 源码</a>
+                <a href="../" class="btn btn-outline">查看所有项目</a>
             </div>
         </div>
     </main>
