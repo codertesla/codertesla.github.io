@@ -107,6 +107,83 @@
             background: var(--accent-cyan);
             color: #000;
         }
+
+        .quick-start-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-cyan);
+            color: #000;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .provider-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .provider-table th,
+        .provider-table td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .provider-table th {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        .provider-table td {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .provider-table code {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .note-box {
+            background: rgba(255, 200, 50, 0.05);
+            border: 1px solid rgba(255, 200, 50, 0.2);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .note-box strong {
+            color: rgba(255, 200, 50, 0.9);
+        }
     </style>
 </head>
 <body>
@@ -138,48 +215,92 @@
                 <div class="badge-list" style="justify-content: center;">
                     <img src="https://img.shields.io/open-vsx/v/codertesla/wtf-commit" alt="VSX Version">
                     <img src="https://img.shields.io/open-vsx/dt/codertesla/wtf-commit" alt="VSX Downloads">
+                    <img src="https://img.shields.io/github/license/codertesla/wtf-commit" alt="License">
                     <img src="https://img.shields.io/github/stars/codertesla/wtf-commit?style=social" alt="GitHub Stars">
                 </div>
                 <h1 class="hero-title">WTF Commit ✨</h1>
                 <p style="font-size: 1.5rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 3rem; line-height: 1.6;">
-                    A minimalist VS Code extension that uses AI to generate concise and meaningful Git commit messages from your changes.
+                    A minimalist VS Code extension that uses AI to generate concise and meaningful Git commit messages from your staged changes (or working tree changes).
                 </p>
-                <div style="display: flex; gap: 1.5rem; justify-content: center;">
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
                     <a href="https://open-vsx.org/extension/codertesla/wtf-commit" target="_blank" class="btn">Install Now</a>
                     <a href="https://github.com/codertesla/wtf-commit" target="_blank" class="btn btn-outline">Star on GitHub</a>
                 </div>
             </div>
         </section>
 
-        <!-- Advantages Section -->
+        <!-- Quick Start Section -->
+        <section class="container" style="padding-bottom: 6rem;">
+            <h2 class="section-title">⏱️ Quick Start</h2>
+            <div class="quick-start-steps">
+                <div class="step-card">
+                    <span class="step-number">1</span>
+                    <h3 style="margin: 1rem 0 0.5rem; color: var(--accent-cyan);">Install</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">Search for <code style="background: rgba(255,255,255,0.08); padding: 0.1rem 0.3rem; border-radius: 4px;">WTF Commit</code> in the Open VSX Extensions marketplace and install.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">2</span>
+                    <h3 style="margin: 1rem 0 0.5rem; color: var(--accent-cyan);">Set API Key</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">Press <span class="shortcut">Cmd+Shift+P</span>, type <b>WTF Commit: Set API Key</b>, select your provider, and paste your key.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">3</span>
+                    <h3 style="margin: 1rem 0 0.5rem; color: var(--accent-cyan);">Generate</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">Press <span class="shortcut">Cmd+Alt+G</span>. The extension will automatically generate a message based on your code diff.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
         <section class="container" style="padding-bottom: 8rem;">
-            <h2 class="section-title">Core Advantages</h2>
+            <h2 class="section-title">🚀 Features</h2>
             <div class="advantage-grid">
                 <div class="feature-card">
-                    <span class="advantage-icon">🤖</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Custom Models</h3>
-                    <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
-                        Total freedom. Use any OpenAI-compatible provider (Ollama, DeepSeek, Moonshot, etc.) by adjusting the Base URL and Model name.
-                    </p>
-                </div>
-                <div class="feature-card">
                     <span class="advantage-icon">🌍</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Multi-Lingual</h3>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Multi-lingual Support</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
-                        English, Chinese, Japanese, or even Classical Chinese. Want emojis only? Set a <b>Custom Language</b> and watch AI adapt.
+                        Preset support for English, Chinese, Japanese, Classical Chinese, and <b>Custom</b> strings. Want emojis only? Set a custom language.
                     </p>
                 </div>
                 <div class="feature-card">
-                    <span class="advantage-icon">⌨️</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Quick Shortcuts</h3>
+                    <span class="advantage-icon">📐</span>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Conventional Commits</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
-                        Generate and commit in one keystroke with <span class="shortcut">Cmd+Alt+G</span>. Supports chorded keybindings for power users.
+                        Automatically follows conventional commit standards (feat, fix, docs, etc.) for a clean and consistent Git history.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="advantage-icon">🧠</span>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Intent-Aware Generation</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
+                        Reuses any text already typed into the SCM input box as a zero-config generation hint for more accurate messages.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="advantage-icon">⚡</span>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Streaming Generation</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
+                        Real-time streaming output so you can see the commit message as it's being generated, no waiting for the full response.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="advantage-icon">✏️</span>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Interactive Tuning</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
+                        Auto-commit flows support real-time message editing without blocking Git staging. Fine-tune before pushing.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="advantage-icon">🔧</span>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Lightweight Recovery</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
+                        Offers an inline <b>AI Repair</b> action when the generated title format needs a quick fix.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Features Pipeline -->
+        <!-- Automation Pipeline -->
         <section style="background: rgba(255, 255, 255, 0.02); padding: 6rem 0;">
             <div class="container">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
@@ -190,46 +311,82 @@
                                 <span style="color: var(--accent-cyan);">🚀</span>
                                 <div>
                                     <h4 style="margin-bottom: 0.25rem;">Smart Diffing</h4>
-                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Automatically stages changes if none are staged, keeping you in the flow.</p>
+                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Prioritizes staged changes, falls back to working tree changes, and strips low-value diff noise before generation.</p>
                                 </div>
                             </li>
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
                                 <span style="color: var(--accent-cyan);">🔄</span>
                                 <div>
                                     <h4 style="margin-bottom: 0.25rem;">Auto Commit & Push</h4>
-                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Chain operations: generate, commit, and push sequentially without lifting your hands.</p>
+                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Full automation pipeline — generate, commit, and push in one keystroke without lifting your hands.</p>
                                 </div>
                             </li>
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <span style="color: var(--accent-cyan);">📦</span>
+                                <span style="color: var(--accent-cyan);">�️</span>
                                 <div>
-                                    <h4 style="margin-bottom: 0.25rem;">Refactor Support</h4>
-                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Smart summaries for massive file renames, avoiding API context length issues.</p>
+                                    <h4 style="margin-bottom: 0.25rem;">Reliable Request Flow</h4>
+                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Built-in timeout + automatic retry with categorized API error handling. Extended reasoning for DeepSeek and other thinking models.</p>
+                                </div>
+                            </li>
+                            <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <span style="color: var(--accent-cyan);">⌨️</span>
+                                <div>
+                                    <h4 style="margin-bottom: 0.25rem;">Keyboard Shortcuts</h4>
+                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Default binding <span class="shortcut">Cmd+Alt+G</span> (Mac) / <span class="shortcut">Ctrl+Alt+G</span> (Windows/Linux). Supports chorded keybindings.</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="feature-card" style="padding: 2.5rem;">
-                        <h3 style="margin-bottom: 2rem;">Supported Providers</h3>
-                        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
-                            <span class="provider-tag">OpenAI</span>
-                            <span class="provider-tag">DeepSeek</span>
-                            <span class="provider-tag">Moonshot (Kimi)</span>
-                            <span class="provider-tag">GLM (Zhipu)</span>
-                            <span class="provider-tag">Gemini</span>
-                            <span class="provider-tag">OpenRouter</span>
-                            <span class="provider-tag">Ollama (Custom)</span>
+                        <h3 style="margin-bottom: 1.5rem;">Supported Providers</h3>
+                        <table class="provider-table">
+                            <thead>
+                                <tr>
+                                    <th>Provider</th>
+                                    <th>Default Model</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>OpenAI</td><td><code>gpt-5-nano</code></td></tr>
+                                <tr><td>DeepSeek</td><td><code>deepseek-v4-flash</code></td></tr>
+                                <tr><td>Moonshot (Kimi)</td><td><code>kimi-k2.6</code></td></tr>
+                                <tr><td>GLM (Zhipu)</td><td><code>glm-5.1</code></td></tr>
+                                <tr><td>Gemini</td><td><code>gemini-3.1-flash-lite</code></td></tr>
+                                <tr><td>OpenRouter</td><td><code>openrouter/free</code></td></tr>
+                                <tr><td>Custom</td><td>Any OpenAI-compatible endpoint</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="note-box">
+                            <strong>⚠️ Claude Support:</strong> Native Claude format is not supported yet. Please use a proxy service that provides an OpenAI-compatible endpoint.
                         </div>
-                        <p style="margin-top: 2rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.4);">
-                            * Any OpenAI-compatible endpoint is supported via Custom Provider.
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Other Triggers & Tips -->
+        <section class="container" style="padding: 6rem 0;">
+            <h2 class="section-title">🕹️ Other Ways to Trigger</h2>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
+                    <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                        <span style="color: var(--accent-cyan);">✨</span>
+                        <p style="color: rgba(255, 255, 255, 0.7);"><b>Source Control Icon</b> — Click the ✨ icon at the top of the Git panel.</p>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                        <span style="color: var(--accent-cyan);">🎨</span>
+                        <p style="color: rgba(255, 255, 255, 0.7);"><b>Command Palette</b> — Run <code style="background: rgba(255,255,255,0.08); padding: 0.1rem 0.3rem; border-radius: 4px;">WTF Commit: Generate</code> or <code style="background: rgba(255,255,255,0.08); padding: 0.1rem 0.3rem; border-radius: 4px;">WTF Commit: Set API Key</code>.</p>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                        <span style="color: var(--accent-cyan);">🎹</span>
+                        <p style="color: rgba(255, 255, 255, 0.7);"><b>Chorded Keybinding</b> — Bind a double-press like <span class="shortcut">Cmd+G</span> <span class="shortcut">Cmd+G</span> via Keyboard Shortcuts (<span class="shortcut">Cmd+K Cmd+S</span>).</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <!-- CTA Section -->
-        <section class="container" style="padding: 10rem 0 8rem; text-align: center;">
+        <section class="container" style="padding: 6rem 0 8rem; text-align: center;">
             <div class="feature-card" style="max-width: 800px; margin: 0 auto; padding: 4rem;">
                 <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Ready to level up?</h2>
                 <p style="margin-bottom: 3rem; color: rgba(255, 255, 255, 0.7);">Simplify your workflow and keep your Git history clean with AI.</p>
@@ -255,4 +412,3 @@
     </footer>
 </body>
 </html>
-

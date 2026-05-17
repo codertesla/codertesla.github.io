@@ -107,6 +107,83 @@
             background: var(--accent-cyan);
             color: #000;
         }
+
+        .quick-start-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-cyan);
+            color: #000;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .provider-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .provider-table th,
+        .provider-table td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .provider-table th {
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        .provider-table td {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .provider-table code {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .note-box {
+            background: rgba(255, 200, 50, 0.05);
+            border: 1px solid rgba(255, 200, 50, 0.2);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .note-box strong {
+            color: rgba(255, 200, 50, 0.9);
+        }
     </style>
 </head>
 <body>
@@ -138,48 +215,92 @@
                 <div class="badge-list" style="justify-content: center;">
                     <img src="https://img.shields.io/open-vsx/v/codertesla/wtf-commit" alt="VSX 版本">
                     <img src="https://img.shields.io/open-vsx/dt/codertesla/wtf-commit" alt="VSX 下载量">
+                    <img src="https://img.shields.io/github/license/codertesla/wtf-commit" alt="开源协议">
                     <img src="https://img.shields.io/github/stars/codertesla/wtf-commit?style=social" alt="GitHub Star">
                 </div>
                 <h1 class="hero-title">WTF Commit ✨</h1>
                 <p style="font-size: 1.5rem; color: rgba(255, 255, 255, 0.7); margin-bottom: 3rem; line-height: 1.6;">
-                    极简主义的 VS Code 插件，利用 AI 从你的变更中生成简洁且有意义的 Git commit 信息。
+                    极简主义的 VS Code 扩展，利用 AI 根据您暂存的更改（或工作区更改）生成简洁且有意义的 Git 提交信息。
                 </p>
-                <div style="display: flex; gap: 1.5rem; justify-content: center;">
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
                     <a href="https://open-vsx.org/extension/codertesla/wtf-commit" target="_blank" class="btn">立即安装</a>
                     <a href="https://github.com/codertesla/wtf-commit" target="_blank" class="btn btn-outline">在 GitHub 上 Star</a>
                 </div>
             </div>
         </section>
 
-        <!-- Advantages Section -->
-        <section class="container" style="padding-bottom: 8rem;">
-            <h2 class="section-title">核心优势</h2>
-            <div class="advantage-grid">
-                <div class="feature-card">
-                    <span class="advantage-icon">🤖</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">自定义模型</h3>
-                    <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
-                        完全自由。通过调整 Base URL 和模型名称，使用任何兼容 OpenAI 的提供商（Ollama, DeepSeek, Moonshot 等）。
-                    </p>
+        <!-- Quick Start Section -->
+        <section class="container" style="padding-bottom: 6rem;">
+            <h2 class="section-title">⏱️ 极简上手</h2>
+            <div class="quick-start-steps">
+                <div class="step-card">
+                    <span class="step-number">1</span>
+                    <h3 style="margin: 1rem 0 0.5rem; color: var(--accent-cyan);">下载安装</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">在 Open VSX 插件市场搜索 <code style="background: rgba(255,255,255,0.08); padding: 0.1rem 0.3rem; border-radius: 4px;">WTF Commit</code> 并安装。</p>
                 </div>
+                <div class="step-card">
+                    <span class="step-number">2</span>
+                    <h3 style="margin: 1rem 0 0.5rem; color: var(--accent-cyan);">输入 API Key</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">按下 <span class="shortcut">Cmd+Shift+P</span>，输入 <b>WTF Commit: Set API Key</b>，选择服务商并粘贴 Key。</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">3</span>
+                    <h3 style="margin: 1rem 0 0.5rem; color: var(--accent-cyan);">一键生成</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">按下 <span class="shortcut">Cmd+Alt+G</span>，插件将自动根据代码变动生成提交信息并填入输入框。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="container" style="padding-bottom: 8rem;">
+            <h2 class="section-title">🚀 功能特性</h2>
+            <div class="advantage-grid">
                 <div class="feature-card">
                     <span class="advantage-icon">🌍</span>
                     <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">多语言支持</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
-                        英语、中文、日语，甚至是文言文。只想用 Emoji？设置<b>自定义语言</b>，AI 会自动适应。
+                        预设支持英文、简体中文、繁体中文、日语、文言文，并支持<b>自定义语言</b>。只想用 Emoji？设置自定义语言即可。
                     </p>
                 </div>
                 <div class="feature-card">
-                    <span class="advantage-icon">⌨️</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">快捷键操作</h3>
+                    <span class="advantage-icon">📐</span>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">约定式提交</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
-                        按下 <span class="shortcut">Cmd+Alt+G</span> 即可一键生成并提交。支持组合键绑定，适合高级用户。
+                        自动遵循约定式提交标准（feat, fix, docs 等），保持 Git 历史轨迹清晰一致。
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="advantage-icon">🧠</span>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">意图感知生成</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
+                        复用你已写在 SCM 输入框中的文本，作为零配置提示词参与生成，让结果更贴合意图。
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="advantage-icon">⚡</span>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">流式生成</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
+                        实时流式输出，生成过程中即可看到 commit message 逐步呈现，无需等待完整响应。
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="advantage-icon">✏️</span>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">实时调优</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
+                        Auto-commit 流程支持直接进入 Input Box 二次编辑，避免阻断生成快感。
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="advantage-icon">🔧</span>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">轻量纠偏</h3>
+                    <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
+                        当标题格式不够规范时，支持直接点击 <b>AI Repair</b> 做一次快速修正。
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Features Pipeline -->
+        <!-- Automation Pipeline -->
         <section style="background: rgba(255, 255, 255, 0.02); padding: 6rem 0;">
             <div class="container">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
@@ -189,47 +310,83 @@
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
                                 <span style="color: var(--accent-cyan);">🚀</span>
                                 <div>
-                                    <h4 style="margin-bottom: 0.25rem;">智能暂存 (Diffing)</h4>
-                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">如果没有暂存变更，将自动暂存，保持工作流顺畅。</p>
+                                    <h4 style="margin-bottom: 0.25rem;">智能差异化</h4>
+                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">优先处理暂存的更改，若无则回退到工作区更改，并在生成前过滤更多低价值 diff 噪声。</p>
                                 </div>
                             </li>
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
                                 <span style="color: var(--accent-cyan);">🔄</span>
                                 <div>
                                     <h4 style="margin-bottom: 0.25rem;">自动提交与推送</h4>
-                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">链式操作：按顺序完成生成、提交和推送，无需离开键盘。</p>
+                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">一键完成生成 + 提交 + 推送，全链路自动化，无需离开键盘。</p>
                                 </div>
                             </li>
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <span style="color: var(--accent-cyan);">📦</span>
+                                <span style="color: var(--accent-cyan);">🛡️</span>
                                 <div>
-                                    <h4 style="margin-bottom: 0.25rem;">重构支持</h4>
-                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">针对大规模文件重命名的智能总结，避免 API 上下文长度溢出。</p>
+                                    <h4 style="margin-bottom: 0.25rem;">请求稳定性增强</h4>
+                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">内置超时 + 自动重试机制，附带分类错误反馈，支持 DeepSeek 等推理型模型的自动长超时。</p>
+                                </div>
+                            </li>
+                            <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <span style="color: var(--accent-cyan);">⌨️</span>
+                                <div>
+                                    <h4 style="margin-bottom: 0.25rem;">快捷键支持</h4>
+                                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">默认绑定 <span class="shortcut">Cmd+Alt+G</span> (Mac) / <span class="shortcut">Ctrl+Alt+G</span> (Windows/Linux)。支持连击快捷键。</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="feature-card" style="padding: 2.5rem;">
-                        <h3 style="margin-bottom: 2rem;">支持的模型提供商</h3>
-                        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
-                            <span class="provider-tag">OpenAI</span>
-                            <span class="provider-tag">DeepSeek</span>
-                            <span class="provider-tag">Moonshot (Kimi)</span>
-                            <span class="provider-tag">GLM (智谱)</span>
-                            <span class="provider-tag">Gemini</span>
-                            <span class="provider-tag">OpenRouter</span>
-                            <span class="provider-tag">Ollama (自定义)</span>
+                        <h3 style="margin-bottom: 1.5rem;">支持的服务商与模型</h3>
+                        <table class="provider-table">
+                            <thead>
+                                <tr>
+                                    <th>服务商</th>
+                                    <th>默认模型</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>OpenAI</td><td><code>gpt-5-nano</code></td></tr>
+                                <tr><td>DeepSeek</td><td><code>deepseek-v4-flash</code></td></tr>
+                                <tr><td>Moonshot (Kimi)</td><td><code>kimi-k2.6</code></td></tr>
+                                <tr><td>GLM (智谱)</td><td><code>glm-5.1</code></td></tr>
+                                <tr><td>Gemini</td><td><code>gemini-3.1-flash-lite</code></td></tr>
+                                <tr><td>OpenRouter</td><td><code>openrouter/free</code></td></tr>
+                                <tr><td>Custom</td><td>任何 OpenAI 兼容端点</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="note-box">
+                            <strong>⚠️ 关于 Claude：</strong>目前暂不支持 Claude 原生格式。请使用支持 OpenAI 兼容端点的中转服务。
                         </div>
-                        <p style="margin-top: 2rem; font-size: 0.85rem; color: rgba(255, 255, 255, 0.4);">
-                            * 通过“自定义提供商”支持任何兼容 OpenAI 的接口。
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Other Triggers & Tips -->
+        <section class="container" style="padding: 6rem 0;">
+            <h2 class="section-title">🕹️ 其他触发方式</h2>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
+                    <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                        <span style="color: var(--accent-cyan);">✨</span>
+                        <p style="color: rgba(255, 255, 255, 0.7);"><b>源代码管理图标</b> — 点击 Git 面板顶部的 ✨ 图标。</p>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                        <span style="color: var(--accent-cyan);">🎨</span>
+                        <p style="color: rgba(255, 255, 255, 0.7);"><b>命令面板</b> — 运行 <code style="background: rgba(255,255,255,0.08); padding: 0.1rem 0.3rem; border-radius: 4px;">WTF Commit: Generate</code> 或 <code style="background: rgba(255,255,255,0.08); padding: 0.1rem 0.3rem; border-radius: 4px;">WTF Commit: Set API Key</code>。</p>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: flex-start;">
+                        <span style="color: var(--accent-cyan);">🎹</span>
+                        <p style="color: rgba(255, 255, 255, 0.7);"><b>连击快捷键 (Chord)</b> — 通过键盘快捷键设置 (<span class="shortcut">Cmd+K Cmd+S</span>) 绑定双击 <span class="shortcut">Cmd+G</span> <span class="shortcut">Cmd+G</span> 触发。</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <!-- CTA Section -->
-        <section class="container" style="padding: 10rem 0 8rem; text-align: center;">
+        <section class="container" style="padding: 6rem 0 8rem; text-align: center;">
             <div class="feature-card" style="max-width: 800px; margin: 0 auto; padding: 4rem;">
                 <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">准备好升级了吗？</h2>
                 <p style="margin-bottom: 3rem; color: rgba(255, 255, 255, 0.7);">利用 AI 简化工作流，保持 Git 历史轨迹清晰整洁。</p>

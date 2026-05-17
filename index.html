@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoderTesla | Portfolio</title>
-    <meta name="description" content="Portfolio of CoderTesla - Software Engineer and Open Source Developer. Showcasing AI tools, web automation, and more.">
+    <meta name="description" content="Portfolio of CoderTesla (Dino🦖) - Software Engineer and Open Source Developer. AI tools, web automation, and developer productivity.">
+    <meta property="og:title" content="CoderTesla | Portfolio">
+    <meta property="og:description" content="A coding dino. Web Automation & AI-powered productivity tools. Python, JavaScript, TypeScript.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://codertesla.github.io/">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/49013475?v=4">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CoderTesla | Portfolio">
+    <meta name="twitter:description" content="A coding dino. Web Automation & AI-powered productivity tools.">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/49013475?v=4">
     <link rel="icon" type="image/svg+xml" href="logo.svg">
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +21,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="bg-blobs">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <div class="bg-blobs" aria-hidden="true">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
     </div>
@@ -20,64 +31,103 @@
     <header>
         <div class="container" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
             <a href="/" class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
-                <img src="logo.svg" alt="Logo" style="width: 32px; height: 32px;">
+                <img src="logo.svg" alt="CoderTesla logo" style="width: 32px; height: 32px;">
                 <span>CoderTesla</span>
             </a>
-            <nav>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="main-nav">
                 <ul>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="https://github.com/codertesla" target="_blank">GitHub</a></li>
+                    <li><a href="https://github.com/codertesla" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <h1>Crafting Digital<br><span style="color: var(--accent-cyan)">Experiences with AI</span></h1>
-                <p>Developing minimalist tools and AI-driven solutions to enhance developer productivity and web experiences.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center;">
+                <div class="hero-profile">
+                    <img src="https://avatars.githubusercontent.com/u/49013475?v=4" alt="CoderTesla avatar" class="avatar">
+                </div>
+                <h1>Hi, I'm Dino🦖<br><span class="hero-accent">@codertesla</span></h1>
+                <p>A coding dino exploring the digital landscape. Focused on Web Automation and AI-powered productivity tools.</p>
+                <div class="hero-actions">
                     <a href="#projects" class="btn">Explore Work</a>
-                    <a href="https://github.com/codertesla" target="_blank" class="btn btn-outline">GitHub Profile</a>
+                    <a href="https://github.com/codertesla" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub Profile</a>
                 </div>
             </div>
         </section>
 
+        <!-- About Section -->
+        <section id="about" class="container about-section">
+            <h2 class="section-heading">About Me</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <ul class="about-list">
+                        <li><span class="about-emoji">🔭</span> Currently focused on <strong>Web Automation</strong> and <strong>AI-powered productivity tools</strong></li>
+                        <li><span class="about-emoji">🌱</span> Constantly refining my skills in Python, JavaScript, and TypeScript</li>
+                        <li><span class="about-emoji">💬</span> Ask me about Bilibili userscripts, SSL utilities, or AI-enhanced workflows</li>
+                        <li><span class="about-emoji">☄️</span> Located on Mars (or at least that's where the best code is written)</li>
+                        <li><span class="about-emoji">⚡</span> Fun fact: I believe dinosaurs didn't go extinct; they just moved to the cloud</li>
+                    </ul>
+                </div>
+                <div class="about-card">
+                    <h3 class="tech-stack-title">Tech Stack</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge tech-python">Python</span>
+                        <span class="tech-badge tech-js">JavaScript</span>
+                        <span class="tech-badge tech-ts">TypeScript</span>
+                        <span class="tech-badge tech-node">Node.js</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
         <section id="projects" class="container">
-            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Selected Projects</h2>
+            <h2 class="section-heading">Selected Projects</h2>
             <div class="project-grid">
-                <!-- wtf-commit -->
-                <div class="project-card">
+                <!-- wtf-commit (featured) -->
+                <div class="project-card featured">
                     <div>
-                        <h3>wtf-commit</h3>
+                        <div class="project-icon">✨</div>
+                        <h3>WTF Commit</h3>
                         <div class="tags">
                             <span class="tag">AI</span>
                             <span class="tag">VS Code</span>
                             <span class="tag">TypeScript</span>
                         </div>
-                        <p>Minimalist VS Code extension that uses AI to generate concise and meaningful Git commit messages from staged changes.</p>
+                        <p>AI-powered VS Code extension for meaningful commit messages. Supports streaming, multi-provider, conventional commits, and full automation pipeline.</p>
                     </div>
                     <a href="wtf-commit/" class="btn btn-outline">View Project</a>
                 </div>
 
-                <!-- EAR -->
+                <!-- codex-remote-login -->
                 <div class="project-card">
                     <div>
-                        <h3>EAR</h3>
+                        <div class="project-icon">�</div>
+                        <h3>codex-remote-login</h3>
                         <div class="tags">
-                            <span class="tag">Finance</span>
-                            <span class="tag">Tool</span>
-                            <span class="tag">JavaScript</span>
+                            <span class="tag">DevOps</span>
+                            <span class="tag">CLI</span>
+                            <span class="tag">Shell</span>
                         </div>
-                        <p>A real interest rate calculator for credit card installments, helping users understand the true cost of their spending.</p>
+                        <p>An elegant, zero-dependency bash script to seamlessly authenticate the Codex CLI on remote or headless servers using an ephemeral SSH tunnel.</p>
                     </div>
-                    <a href="ear/" class="btn btn-outline">View Project</a>
+                    <a href="https://github.com/codertesla/codex-remote-login" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View on GitHub</a>
                 </div>
 
                 <!-- SSLCheck -->
                 <div class="project-card">
                     <div>
+                        <div class="project-icon">🔒</div>
                         <h3>SSLCheck</h3>
                         <div class="tags">
                             <span class="tag">Security</span>
@@ -89,23 +139,10 @@
                     <a href="sslcheck/" class="btn btn-outline">View Project</a>
                 </div>
 
-                <!-- PyVanity -->
-                <div class="project-card">
-                    <div>
-                        <h3>PyVanity</h3>
-                        <div class="tags">
-                            <span class="tag">Blockchain</span>
-                            <span class="tag">Ethereum</span>
-                            <span class="tag">Python</span>
-                        </div>
-                        <p>High-performance Ethereum vanity address generator powered by Python, simplifying custom wallet creation.</p>
-                    </div>
-                    <a href="pyvanity/" class="btn btn-outline">View Project</a>
-                </div>
-
                 <!-- Bilibili Blocker -->
                 <div class="project-card">
                     <div>
+                        <div class="project-icon">🚫</div>
                         <h3>bilibili-1-click-blocker</h3>
                         <div class="tags">
                             <span class="tag">Userscript</span>
@@ -117,9 +154,25 @@
                     <a href="bilibili-1-click-blocker/" class="btn btn-outline">View Project</a>
                 </div>
 
+                <!-- EAR -->
+                <div class="project-card">
+                    <div>
+                        <div class="project-icon">�</div>
+                        <h3>EAR</h3>
+                        <div class="tags">
+                            <span class="tag">Finance</span>
+                            <span class="tag">Tool</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <p>A real interest rate calculator for credit card installments, helping users understand the true cost of their spending.</p>
+                    </div>
+                    <a href="ear/" class="btn btn-outline">View Project</a>
+                </div>
+
                 <!-- Bilibili Speed Controller -->
                 <div class="project-card">
                     <div>
+                        <div class="project-icon">⏩</div>
                         <h3>bilibili-video-speed-controller</h3>
                         <div class="tags">
                             <span class="tag">Userscript</span>
@@ -130,12 +183,59 @@
                     </div>
                     <a href="bilibili-video-speed-controller/" class="btn btn-outline">View Project</a>
                 </div>
+
+                <!-- PyVanity -->
+                <div class="project-card">
+                    <div>
+                        <div class="project-icon">⛓️</div>
+                        <h3>PyVanity</h3>
+                        <div class="tags">
+                            <span class="tag">Blockchain</span>
+                            <span class="tag">Ethereum</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <p>High-performance Ethereum vanity address generator powered by Python, simplifying custom wallet creation.</p>
+                    </div>
+                    <a href="pyvanity/" class="btn btn-outline">View Project</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="container">
-        <p>&copy; 2026 CoderTesla. Designed with passion for open source.</p>
+        <div class="footer-content">
+            <a href="/" class="logo footer-logo" style="display: flex; align-items: center; gap: 0.5rem;">
+                <img src="logo.svg" alt="CoderTesla logo" style="width: 24px; height: 24px;">
+                <span style="font-size: 1rem;">CoderTesla</span>
+            </a>
+            <p>&copy; 2026 CoderTesla. Designed with passion for open source.</p>
+            <div class="footer-links">
+                <a href="https://github.com/codertesla" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('#main-nav');
+        
+        menuBtn.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('open');
+            menuBtn.classList.toggle('active');
+            menuBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close mobile menu when clicking a nav link
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+                menuBtn.classList.remove('active');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
 </body>
 </html>
