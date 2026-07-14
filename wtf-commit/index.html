@@ -8,44 +8,43 @@
     <link rel="stylesheet" href="../index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --brand-font: 'Outfit', 'Inter', sans-serif;
+            --brand-font: 'Space Grotesk', 'Inter', sans-serif;
         }
         
         body {
             font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #ededed;
         }
 
         h1, h2, h3 {
             font-family: var(--brand-font);
-            font-weight: 700;
+            font-weight: 600;
+            letter-spacing: -0.02em;
         }
 
         .hero-title {
-            background: linear-gradient(135deg, #fff 0%, #a5f3fc 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: clamp(3rem, 8vw, 4.5rem);
+            font-size: clamp(2.75rem, 8vw, 4rem);
             line-height: 1.1;
             margin-bottom: 1.5rem;
+            color: #ededed;
+            font-weight: 700;
         }
 
         .feature-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 2rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(12px);
+            background: #161616;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.75rem;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-cyan);
-            box-shadow: 0 10px 30px -10px rgba(0, 255, 242, 0.2);
+            border-color: rgba(232, 176, 77, 0.4);
+            background: #1a1a1a;
         }
 
         .advantage-grid {
@@ -64,9 +63,9 @@
 
         .provider-tag {
             padding: 0.5rem 1rem;
-            border-radius: 99px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             font-size: 0.875rem;
             display: flex;
             align-items: center;
@@ -74,38 +73,43 @@
         }
 
         .shortcut {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.2rem 0.5rem;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 0.15rem 0.45rem;
             border-radius: 4px;
             font-family: monospace;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85em;
         }
 
         .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
             text-align: center;
+            font-family: var(--brand-font);
+            font-weight: 600;
+            letter-spacing: -0.02em;
         }
 
         .advantage-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
             display: block;
         }
 
         .lang-switch {
             text-decoration: none;
-            color: var(--accent-cyan);
-            padding: 0.4rem 0.8rem;
-            border: 1px solid var(--accent-cyan);
-            border-radius: 8px;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
+            color: #e8b04d;
+            padding: 0.35rem 0.7rem;
+            border: 1px solid rgba(232, 176, 77, 0.5);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            transition: all 0.2s ease;
         }
 
         .lang-switch:hover {
-            background: var(--accent-cyan);
-            color: #000;
+            background: #e8b04d;
+            color: #0a0a0a;
+            border-color: #e8b04d;
         }
 
         .quick-start-steps {
@@ -116,29 +120,29 @@
         }
 
         .step-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 16px;
-            padding: 2rem;
+            background: #161616;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.75rem;
             text-align: center;
             position: relative;
         }
 
         .step-number {
             position: absolute;
-            top: -1rem;
+            top: -0.85rem;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--accent-cyan);
-            color: #000;
-            width: 2rem;
-            height: 2rem;
+            background: #e8b04d;
+            color: #0a0a0a;
+            width: 1.75rem;
+            height: 1.75rem;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .provider-table {
@@ -150,48 +154,43 @@
 
         .provider-table th,
         .provider-table td {
-            padding: 0.75rem 1rem;
+            padding: 0.7rem 1rem;
             text-align: left;
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .provider-table th {
-            color: var(--accent-cyan);
+            color: #e8b04d;
             font-weight: 600;
         }
 
         .provider-table td {
-            color: rgba(255, 255, 255, 0.7);
+            color: #9a9a9a;
         }
 
         .provider-table code {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 0.15rem 0.4rem;
-            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 0.1rem 0.35rem;
+            border-radius: 3px;
             font-size: 0.8rem;
         }
 
         .note-box {
-            background: rgba(255, 200, 50, 0.05);
-            border: 1px solid rgba(255, 200, 50, 0.2);
-            border-radius: 12px;
-            padding: 1rem 1.5rem;
-            margin-top: 1.5rem;
+            background: rgba(232, 176, 77, 0.06);
+            border: 1px solid rgba(232, 176, 77, 0.2);
+            border-radius: 8px;
+            padding: 0.9rem 1.2rem;
+            margin-top: 1.25rem;
             font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.7);
+            color: #9a9a9a;
         }
 
         .note-box strong {
-            color: rgba(255, 200, 50, 0.9);
+            color: #e8b04d;
         }
     </style>
 </head>
 <body>
-    <div class="bg-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
-
     <header>
         <div class="container" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
             <a href="../" class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
@@ -235,17 +234,17 @@
             <div class="quick-start-steps">
                 <div class="step-card">
                     <span class="step-number">1</span>
-                    <h3 style="margin: 1rem 0 0.5rem; color: var(--accent-cyan);">Install</h3>
+                    <h3 style="margin: 1rem 0 0.5rem; color: #e8b04d;">Install</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">Search for <code style="background: rgba(255,255,255,0.08); padding: 0.1rem 0.3rem; border-radius: 4px;">WTF Commit</code> in the Open VSX Extensions marketplace and install.</p>
                 </div>
                 <div class="step-card">
                     <span class="step-number">2</span>
-                    <h3 style="margin: 1rem 0 0.5rem; color: var(--accent-cyan);">Set API Key</h3>
+                    <h3 style="margin: 1rem 0 0.5rem; color: #e8b04d;">Set API Key</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">Press <span class="shortcut">Cmd+Shift+P</span>, type <b>WTF Commit: Set API Key</b>, select your provider, and paste your key.</p>
                 </div>
                 <div class="step-card">
                     <span class="step-number">3</span>
-                    <h3 style="margin: 1rem 0 0.5rem; color: var(--accent-cyan);">Generate</h3>
+                    <h3 style="margin: 1rem 0 0.5rem; color: #e8b04d;">Generate</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">Press <span class="shortcut">Cmd+Alt+G</span>. The extension will automatically generate a message based on your code diff.</p>
                 </div>
             </div>
@@ -257,42 +256,42 @@
             <div class="advantage-grid">
                 <div class="feature-card">
                     <span class="advantage-icon">🌍</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Multi-lingual Support</h3>
+                    <h3 style="margin-bottom: 1rem; color: #e8b04d;">Multi-lingual Support</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
                         Preset support for English, Chinese, Japanese, Classical Chinese, and <b>Custom</b> strings. Want emojis only? Set a custom language.
                     </p>
                 </div>
                 <div class="feature-card">
                     <span class="advantage-icon">📐</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Conventional Commits</h3>
+                    <h3 style="margin-bottom: 1rem; color: #e8b04d;">Conventional Commits</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
                         Automatically follows conventional commit standards (feat, fix, docs, etc.) for a clean and consistent Git history.
                     </p>
                 </div>
                 <div class="feature-card">
                     <span class="advantage-icon">🧠</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Intent-Aware Generation</h3>
+                    <h3 style="margin-bottom: 1rem; color: #e8b04d;">Intent-Aware Generation</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
                         Reuses any text already typed into the SCM input box as a zero-config generation hint for more accurate messages.
                     </p>
                 </div>
                 <div class="feature-card">
                     <span class="advantage-icon">⚡</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Streaming Generation</h3>
+                    <h3 style="margin-bottom: 1rem; color: #e8b04d;">Streaming Generation</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
                         Real-time streaming output so you can see the commit message as it's being generated, no waiting for the full response.
                     </p>
                 </div>
                 <div class="feature-card">
                     <span class="advantage-icon">✏️</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Interactive Tuning</h3>
+                    <h3 style="margin-bottom: 1rem; color: #e8b04d;">Interactive Tuning</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
                         Auto-commit flows support real-time message editing without blocking Git staging. Fine-tune before pushing.
                     </p>
                 </div>
                 <div class="feature-card">
                     <span class="advantage-icon">🔧</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Lightweight Recovery</h3>
+                    <h3 style="margin-bottom: 1rem; color: #e8b04d;">Lightweight Recovery</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
                         Offers an inline <b>AI Repair</b> action when the generated title format needs a quick fix.
                     </p>
@@ -305,31 +304,31 @@
             <div class="container">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
                     <div>
-                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Full Automation <br><span style="color: var(--accent-purple);">Pipeline</span></h2>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Full Automation <br><span style="color: #e8b04d;">Pipeline</span></h2>
                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.5rem;">
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <span style="color: var(--accent-cyan);">🚀</span>
+                                <span style="color: #e8b04d;">🚀</span>
                                 <div>
                                     <h4 style="margin-bottom: 0.25rem;">Smart Diffing</h4>
                                     <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Prioritizes staged changes, falls back to working tree changes, and strips low-value diff noise before generation.</p>
                                 </div>
                             </li>
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <span style="color: var(--accent-cyan);">🔄</span>
+                                <span style="color: #e8b04d;">🔄</span>
                                 <div>
                                     <h4 style="margin-bottom: 0.25rem;">Auto Commit & Push</h4>
                                     <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Full automation pipeline — generate, commit, and push in one keystroke without lifting your hands.</p>
                                 </div>
                             </li>
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <span style="color: var(--accent-cyan);">�️</span>
+                                <span style="color: #e8b04d;">�️</span>
                                 <div>
                                     <h4 style="margin-bottom: 0.25rem;">Reliable Request Flow</h4>
                                     <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Built-in timeout + automatic retry with categorized API error handling. Extended reasoning for DeepSeek and other thinking models.</p>
                                 </div>
                             </li>
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <span style="color: var(--accent-cyan);">⌨️</span>
+                                <span style="color: #e8b04d;">⌨️</span>
                                 <div>
                                     <h4 style="margin-bottom: 0.25rem;">Keyboard Shortcuts</h4>
                                     <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">Default binding <span class="shortcut">Cmd+Alt+G</span> (Mac) / <span class="shortcut">Ctrl+Alt+G</span> (Windows/Linux). Supports chorded keybindings.</p>
@@ -370,15 +369,15 @@
             <div style="max-width: 700px; margin: 0 auto;">
                 <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
                     <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                        <span style="color: var(--accent-cyan);">✨</span>
+                        <span style="color: #e8b04d;">✨</span>
                         <p style="color: rgba(255, 255, 255, 0.7);"><b>Source Control Icon</b> — Click the ✨ icon at the top of the Git panel.</p>
                     </li>
                     <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                        <span style="color: var(--accent-cyan);">🎨</span>
+                        <span style="color: #e8b04d;">🎨</span>
                         <p style="color: rgba(255, 255, 255, 0.7);"><b>Command Palette</b> — Run <code style="background: rgba(255,255,255,0.08); padding: 0.1rem 0.3rem; border-radius: 4px;">WTF Commit: Generate</code> or <code style="background: rgba(255,255,255,0.08); padding: 0.1rem 0.3rem; border-radius: 4px;">WTF Commit: Set API Key</code>.</p>
                     </li>
                     <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                        <span style="color: var(--accent-cyan);">🎹</span>
+                        <span style="color: #e8b04d;">🎹</span>
                         <p style="color: rgba(255, 255, 255, 0.7);"><b>Chorded Keybinding</b> — Bind a double-press like <span class="shortcut">Cmd+G</span> <span class="shortcut">Cmd+G</span> via Keyboard Shortcuts (<span class="shortcut">Cmd+K Cmd+S</span>).</p>
                     </li>
                 </ul>

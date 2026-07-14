@@ -8,44 +8,43 @@
     <link rel="stylesheet" href="../index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --brand-font: 'Outfit', 'Inter', sans-serif;
+            --brand-font: 'Space Grotesk', 'Inter', sans-serif;
         }
         
         body {
             font-family: 'Inter', "Microsoft YaHei", sans-serif;
+            background: #0a0a0a;
+            color: #ededed;
         }
 
         h1, h2, h3 {
             font-family: var(--brand-font);
-            font-weight: 700;
+            font-weight: 600;
+            letter-spacing: -0.02em;
         }
 
         .hero-title {
-            background: linear-gradient(135deg, #fff 0%, #a5f3fc 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: clamp(3rem, 8vw, 4.5rem);
+            font-size: clamp(2.75rem, 8vw, 4rem);
             line-height: 1.1;
             margin-bottom: 1.5rem;
+            color: #ededed;
+            font-weight: 700;
         }
 
         .feature-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 2rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(12px);
+            background: #161616;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.75rem;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-cyan);
-            box-shadow: 0 10px 30px -10px rgba(0, 255, 242, 0.2);
+            border-color: rgba(232, 176, 77, 0.4);
+            background: #1a1a1a;
         }
 
         .advantage-grid {
@@ -64,9 +63,9 @@
 
         .provider-tag {
             padding: 0.5rem 1rem;
-            border-radius: 99px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             font-size: 0.875rem;
             display: flex;
             align-items: center;
@@ -74,38 +73,43 @@
         }
 
         .shortcut {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.2rem 0.5rem;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 0.15rem 0.45rem;
             border-radius: 4px;
             font-family: monospace;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85em;
         }
 
         .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
             text-align: center;
+            font-family: var(--brand-font);
+            font-weight: 600;
+            letter-spacing: -0.02em;
         }
 
         .advantage-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
             display: block;
         }
 
         .lang-switch {
             text-decoration: none;
-            color: var(--accent-cyan);
-            padding: 0.4rem 0.8rem;
-            border: 1px solid var(--accent-cyan);
-            border-radius: 8px;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
+            color: #e8b04d;
+            padding: 0.35rem 0.7rem;
+            border: 1px solid rgba(232, 176, 77, 0.5);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            transition: all 0.2s ease;
         }
 
         .lang-switch:hover {
-            background: var(--accent-cyan);
-            color: #000;
+            background: #e8b04d;
+            color: #0a0a0a;
+            border-color: #e8b04d;
         }
 
         .quick-start-steps {
@@ -116,29 +120,29 @@
         }
 
         .step-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 16px;
-            padding: 2rem;
+            background: #161616;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 1.75rem;
             text-align: center;
             position: relative;
         }
 
         .step-number {
             position: absolute;
-            top: -1rem;
+            top: -0.85rem;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--accent-cyan);
-            color: #000;
-            width: 2rem;
-            height: 2rem;
+            background: #e8b04d;
+            color: #0a0a0a;
+            width: 1.75rem;
+            height: 1.75rem;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .provider-table {
@@ -150,48 +154,43 @@
 
         .provider-table th,
         .provider-table td {
-            padding: 0.75rem 1rem;
+            padding: 0.7rem 1rem;
             text-align: left;
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .provider-table th {
-            color: var(--accent-cyan);
+            color: #e8b04d;
             font-weight: 600;
         }
 
         .provider-table td {
-            color: rgba(255, 255, 255, 0.7);
+            color: #9a9a9a;
         }
 
         .provider-table code {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 0.15rem 0.4rem;
-            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 0.1rem 0.35rem;
+            border-radius: 3px;
             font-size: 0.8rem;
         }
 
         .note-box {
-            background: rgba(255, 200, 50, 0.05);
-            border: 1px solid rgba(255, 200, 50, 0.2);
-            border-radius: 12px;
-            padding: 1rem 1.5rem;
-            margin-top: 1.5rem;
+            background: rgba(232, 176, 77, 0.06);
+            border: 1px solid rgba(232, 176, 77, 0.2);
+            border-radius: 8px;
+            padding: 0.9rem 1.2rem;
+            margin-top: 1.25rem;
             font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.7);
+            color: #9a9a9a;
         }
 
         .note-box strong {
-            color: rgba(255, 200, 50, 0.9);
+            color: #e8b04d;
         }
     </style>
 </head>
 <body>
-    <div class="bg-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
-
     <header>
         <div class="container" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
             <a href="../" class="logo" style="display: flex; align-items: center; gap: 0.5rem;">
@@ -235,17 +234,17 @@
             <div class="quick-start-steps">
                 <div class="step-card">
                     <span class="step-number">1</span>
-                    <h3 style="margin: 1rem 0 0.5rem; color: var(--accent-cyan);">下载安装</h3>
+                    <h3 style="margin: 1rem 0 0.5rem; color: #e8b04d;">下载安装</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">在 Open VSX 插件市场搜索 <code style="background: rgba(255,255,255,0.08); padding: 0.1rem 0.3rem; border-radius: 4px;">WTF Commit</code> 并安装。</p>
                 </div>
                 <div class="step-card">
                     <span class="step-number">2</span>
-                    <h3 style="margin: 1rem 0 0.5rem; color: var(--accent-cyan);">输入 API Key</h3>
+                    <h3 style="margin: 1rem 0 0.5rem; color: #e8b04d;">输入 API Key</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">按下 <span class="shortcut">Cmd+Shift+P</span>，输入 <b>WTF Commit: Set API Key</b>，选择服务商并粘贴 Key。</p>
                 </div>
                 <div class="step-card">
                     <span class="step-number">3</span>
-                    <h3 style="margin: 1rem 0 0.5rem; color: var(--accent-cyan);">一键生成</h3>
+                    <h3 style="margin: 1rem 0 0.5rem; color: #e8b04d;">一键生成</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">按下 <span class="shortcut">Cmd+Alt+G</span>，插件将自动根据代码变动生成提交信息并填入输入框。</p>
                 </div>
             </div>
@@ -257,42 +256,42 @@
             <div class="advantage-grid">
                 <div class="feature-card">
                     <span class="advantage-icon">🌍</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">多语言支持</h3>
+                    <h3 style="margin-bottom: 1rem; color: #e8b04d;">多语言支持</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
                         预设支持英文、简体中文、繁体中文、日语、文言文，并支持<b>自定义语言</b>。只想用 Emoji？设置自定义语言即可。
                     </p>
                 </div>
                 <div class="feature-card">
                     <span class="advantage-icon">📐</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">约定式提交</h3>
+                    <h3 style="margin-bottom: 1rem; color: #e8b04d;">约定式提交</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
                         自动遵循约定式提交标准（feat, fix, docs 等），保持 Git 历史轨迹清晰一致。
                     </p>
                 </div>
                 <div class="feature-card">
                     <span class="advantage-icon">🧠</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">意图感知生成</h3>
+                    <h3 style="margin-bottom: 1rem; color: #e8b04d;">意图感知生成</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
                         复用你已写在 SCM 输入框中的文本，作为零配置提示词参与生成，让结果更贴合意图。
                     </p>
                 </div>
                 <div class="feature-card">
                     <span class="advantage-icon">⚡</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">流式生成</h3>
+                    <h3 style="margin-bottom: 1rem; color: #e8b04d;">流式生成</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
                         实时流式输出，生成过程中即可看到 commit message 逐步呈现，无需等待完整响应。
                     </p>
                 </div>
                 <div class="feature-card">
                     <span class="advantage-icon">✏️</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">实时调优</h3>
+                    <h3 style="margin-bottom: 1rem; color: #e8b04d;">实时调优</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
                         Auto-commit 流程支持直接进入 Input Box 二次编辑，避免阻断生成快感。
                     </p>
                 </div>
                 <div class="feature-card">
                     <span class="advantage-icon">🔧</span>
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">轻量纠偏</h3>
+                    <h3 style="margin-bottom: 1rem; color: #e8b04d;">轻量纠偏</h3>
                     <p style="color: rgba(255, 255, 255, 0.6); line-height: 1.6;">
                         当标题格式不够规范时，支持直接点击 <b>AI Repair</b> 做一次快速修正。
                     </p>
@@ -305,31 +304,31 @@
             <div class="container">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
                     <div>
-                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">全自动化 <br><span style="color: var(--accent-purple);">流水线</span></h2>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">全自动化 <br><span style="color: #e8b04d;">流水线</span></h2>
                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.5rem;">
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <span style="color: var(--accent-cyan);">🚀</span>
+                                <span style="color: #e8b04d;">🚀</span>
                                 <div>
                                     <h4 style="margin-bottom: 0.25rem;">智能差异化</h4>
                                     <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">优先处理暂存的更改，若无则回退到工作区更改，并在生成前过滤更多低价值 diff 噪声。</p>
                                 </div>
                             </li>
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <span style="color: var(--accent-cyan);">🔄</span>
+                                <span style="color: #e8b04d;">🔄</span>
                                 <div>
                                     <h4 style="margin-bottom: 0.25rem;">自动提交与推送</h4>
                                     <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">一键完成生成 + 提交 + 推送，全链路自动化，无需离开键盘。</p>
                                 </div>
                             </li>
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <span style="color: var(--accent-cyan);">🛡️</span>
+                                <span style="color: #e8b04d;">🛡️</span>
                                 <div>
                                     <h4 style="margin-bottom: 0.25rem;">请求稳定性增强</h4>
                                     <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">内置超时 + 自动重试机制，附带分类错误反馈，支持 DeepSeek 等推理型模型的自动长超时。</p>
                                 </div>
                             </li>
                             <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                                <span style="color: var(--accent-cyan);">⌨️</span>
+                                <span style="color: #e8b04d;">⌨️</span>
                                 <div>
                                     <h4 style="margin-bottom: 0.25rem;">快捷键支持</h4>
                                     <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">默认绑定 <span class="shortcut">Cmd+Alt+G</span> (Mac) / <span class="shortcut">Ctrl+Alt+G</span> (Windows/Linux)。支持连击快捷键。</p>
@@ -370,15 +369,15 @@
             <div style="max-width: 700px; margin: 0 auto;">
                 <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
                     <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                        <span style="color: var(--accent-cyan);">✨</span>
+                        <span style="color: #e8b04d;">✨</span>
                         <p style="color: rgba(255, 255, 255, 0.7);"><b>源代码管理图标</b> — 点击 Git 面板顶部的 ✨ 图标。</p>
                     </li>
                     <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                        <span style="color: var(--accent-cyan);">🎨</span>
+                        <span style="color: #e8b04d;">🎨</span>
                         <p style="color: rgba(255, 255, 255, 0.7);"><b>命令面板</b> — 运行 <code style="background: rgba(255,255,255,0.08); padding: 0.1rem 0.3rem; border-radius: 4px;">WTF Commit: Generate</code> 或 <code style="background: rgba(255,255,255,0.08); padding: 0.1rem 0.3rem; border-radius: 4px;">WTF Commit: Set API Key</code>。</p>
                     </li>
                     <li style="display: flex; gap: 1rem; align-items: flex-start;">
-                        <span style="color: var(--accent-cyan);">🎹</span>
+                        <span style="color: #e8b04d;">🎹</span>
                         <p style="color: rgba(255, 255, 255, 0.7);"><b>连击快捷键 (Chord)</b> — 通过键盘快捷键设置 (<span class="shortcut">Cmd+K Cmd+S</span>) 绑定双击 <span class="shortcut">Cmd+G</span> <span class="shortcut">Cmd+G</span> 触发。</p>
                     </li>
                 </ul>
