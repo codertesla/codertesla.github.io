@@ -6,6 +6,11 @@ ai-coding-deals/assets/（从 telegram-bots 站点同步而来，见该文件末
 acd-ext 追加区）。数据全部预渲染进 HTML，无运行时数据请求；只要数据不变，
 生成结果就逐字节一致，因此 --check 可以放进 CI 拦截手工改产物。
 
+⚠️ 同步上游 UI 前先读 ai-coding-deals/assets/README.md。
+   style.css 只有前 252 行是上游原文，尾部还挂着三条本地布局覆盖规则
+   （#free-paths 分栏、学生栅格、主推面板行高），整文件覆盖会静默删掉它们，
+   构建与 CI 都不会报错，只在页面上表现为错位。
+
 用法：
     python3 scripts/build_acd.py            # 生成
     python3 scripts/build_acd.py --check    # 校验产物是否与数据源同步，不同步退出码 1
@@ -24,6 +29,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "ai-coding-deals.json"
 TEMPLATE_DIR = ROOT / "scripts" / "templates"
 OUT_FILE = ROOT / "ai-coding-deals" / "index.html"
+LOGO_DIR = ROOT / "ai-coding-deals" / "assets" / "logos"
 
 TEMPLATE_ENV = Environment(
     loader=FileSystemLoader(TEMPLATE_DIR),
@@ -59,6 +65,10 @@ def tool_view(tool: dict, cat_labels: dict) -> dict:
     view["initial"] = initial(tool.get("name"))
     view["cat_label"] = cat_labels.get(tool.get("cat", ""), tool.get("cat", ""))
     view["badge"] = STATUS_LABELS.get(tool.get("status", ""), "")
+    # 图标按 id 约定落盘（scripts/fetch_logos.py 生成）。文件不在就不输出 img，
+    # 模板会退回首字母标记——这样缺图不会产生 404 请求，也不会留白框。
+    logo = LOGO_DIR / f"{tool.get('id', '')}.png"
+    view["logo"] = f"assets/logos/{tool['id']}.png" if logo.is_file() else ""
     return view
 
 

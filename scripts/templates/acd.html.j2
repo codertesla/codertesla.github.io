@@ -5,8 +5,13 @@
   以便上游 UI 更新时可以整文件比对，只有内容语义换成「工具」。
   新增内容块（零成本路径 / 决策矩阵 / 促销 / 学生权益 / 法则）用 acd- 前缀类名。
 -#}
-{% macro mark(text, small=False) -%}
-<span class="avatar{% if small %} avatar-small{% endif %}"><span class="avatar-fallback" aria-hidden="true">{{ text }}</span></span>
+{% macro mark(text, logo="", small=False, eager=False) -%}
+<span class="avatar{% if small %} avatar-small{% endif %}">
+{%- if logo -%}
+<img class="avatar-img" src="{{ logo }}" alt="" width="{{ 36 if small else 44 }}" height="{{ 36 if small else 44 }}"{% if not eager %} loading="lazy"{% endif %} decoding="async">
+{%- endif -%}
+<span class="avatar-fallback" aria-hidden="true">{{ text }}</span>
+</span>
 {%- endmacro -%}
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -72,7 +77,7 @@
 {% for tool in featured_tools %}
           <a class="pulse-item" href="{{ tool.url }}" target="_blank" rel="noopener" aria-label="打开 {{ tool.name }}">
             <span class="pulse-rank">{{ "%02d"|format(loop.index) }}</span>
-            {{ mark(tool.initial, small=True) }}
+            {{ mark(tool.initial, tool.logo, small=True, eager=True) }}
             <span class="pulse-name">{{ tool.name }}<small>{{ tool.vendor }}</small></span>
             <strong>{{ tool.price_short }}</strong>
           </a>
@@ -240,7 +245,7 @@
               <div class="bot-grid">
 {% for tool in group.tools %}
                 <a class="bot-card" href="{{ tool.url }}" target="_blank" rel="noopener" aria-label="打开 {{ tool.name }}">
-                  <div class="bot-card-header">{{ mark(tool.initial) }}<span class="monthly">{{ tool.from }}</span></div>
+                  <div class="bot-card-header">{{ mark(tool.initial, tool.logo) }}<span class="monthly">{{ tool.from }}</span></div>
                   <h4>{{ tool.name }}</h4>
                   <p>{{ tool.verdict }}</p>
                   <div class="bot-card-footer"><span class="card-handle">{{ tool.vendor }}</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
