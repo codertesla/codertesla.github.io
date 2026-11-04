@@ -14,6 +14,10 @@ Visit the live portfolio: **[codertesla.github.io](https://codertesla.github.io)
 ## 🛠 Selected Projects
 
 <!-- PROJECTS:START — generated from data/projects.json by scripts/build-projects.mjs; do not edit by hand -->
+### 🧭 [ai-coding-deals](https://codertesla.github.io/ai-coding-deals/)
+*AI · Deals · Guide*
+A curated guide to free tiers, discounts and deals for AI coding tools — Cursor, Windsurf, Codex, Claude, ChatGPT and more.
+
 ### 🤖 [wtf-commit](https://codertesla.github.io/wtf-commit/)
 *AI · VS Code · TypeScript*
 A minimalist VS Code extension that uses AI to generate concise and meaningful Git commit messages from staged changes.

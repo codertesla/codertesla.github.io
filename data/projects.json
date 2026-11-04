@@ -8,11 +8,17 @@
       "featured": true,
       "tags": ["AI", "Deals", "Guide"],
       "description": "省钱指南：AI 编程工具的免费额度、折扣与优惠汇总，持续更新 Cursor、Windsurf、Codex、Claude、ChatGPT 等主流工具的最新羊毛。",
-      "link": "https://github.com/codertesla/ai-coding-deals",
-      "external": true,
-      "cta": "前往 GitHub",
+      "link": "ai-coding-deals/",
+      "external": false,
+      "cta": "查看项目",
       "home": true,
-      "readme": null
+      "readme": {
+        "emoji": "🧭",
+        "title": "ai-coding-deals",
+        "url": "https://codertesla.github.io/ai-coding-deals/",
+        "meta": "AI · Deals · Guide",
+        "description": "A curated guide to free tiers, discounts and deals for AI coding tools — Cursor, Windsurf, Codex, Claude, ChatGPT and more."
+      }
     },
     {
       "id": "telegram-bots",
