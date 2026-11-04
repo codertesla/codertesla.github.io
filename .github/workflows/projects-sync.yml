@@ -1,0 +1,49 @@
+name: Project list sync
+
+# index.html and README.md are generated from data/projects.json.
+# This workflow fails when either file was edited by hand or the generator
+# was not re-run after a data change, so the two lists can never drift apart
+# again.
+
+on:
+  push:
+    paths:
+      - 'data/projects.json'
+      - 'index.html'
+      - 'README.md'
+      - 'scripts/build-projects.mjs'
+      - '.github/workflows/projects-sync.yml'
+  pull_request:
+    paths:
+      - 'data/projects.json'
+      - 'index.html'
+      - 'README.md'
+      - 'scripts/build-projects.mjs'
+  workflow_dispatch:
+
+concurrency:
+  group: projects-sync-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    name: Generated files match projects.json
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verify generated files are in sync
+        run: |
+          if ! node scripts/build-projects.mjs --check; then
+            echo "::error file=data/projects.json::index.html 或 README.md 与 data/projects.json 不同步。请在本地运行 node scripts/build-projects.mjs 后提交生成结果。"
+            exit 1
+          fi

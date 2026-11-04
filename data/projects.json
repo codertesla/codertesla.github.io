@@ -1,0 +1,112 @@
+{
+  "projects": [
+    {
+      "id": "ai-coding-deals",
+      "name": "ai-coding-deals",
+      "repo": "ai-coding-deals",
+      "stars": 134,
+      "featured": true,
+      "tags": ["AI", "Deals", "Guide"],
+      "description": "省钱指南：AI 编程工具的免费额度、折扣与优惠汇总，持续更新 Cursor、Windsurf、Codex、Claude、ChatGPT 等主流工具的最新羊毛。",
+      "link": "https://github.com/codertesla/ai-coding-deals",
+      "external": true,
+      "cta": "前往 GitHub",
+      "home": true,
+      "readme": null
+    },
+    {
+      "id": "telegram-bots",
+      "name": "telegram-bots",
+      "repo": "telegram-bots",
+      "stars": 9,
+      "featured": false,
+      "tags": ["Telegram", "导航", "Python"],
+      "description": "中文 Telegram 机器人导航列表：70 条精选 bot，每条带真实月活数据，每周由 GitHub Actions 自动核验失效。覆盖搜索、群管、下载、AI 等 10 大分类。",
+      "link": "https://codertesla.github.io/telegram-bots/",
+      "external": true,
+      "cta": "在线浏览",
+      "home": true,
+      "readme": null
+    },
+    {
+      "id": "wtf-commit",
+      "name": "WTF Commit",
+      "repo": "wtf-commit",
+      "stars": 5,
+      "featured": false,
+      "tags": ["AI", "VS Code", "TypeScript"],
+      "description": "AI 驱动的 VS Code 扩展，自动生成有意义的 commit message。支持流式输出、多 provider、conventional commits 全自动化。",
+      "link": "wtf-commit/",
+      "external": false,
+      "cta": "查看项目",
+      "home": true,
+      "readme": {
+        "emoji": "🤖",
+        "title": "wtf-commit",
+        "url": "https://codertesla.github.io/wtf-commit/",
+        "meta": "AI · VS Code · TypeScript",
+        "description": "A minimalist VS Code extension that uses AI to generate concise and meaningful Git commit messages from staged changes."
+      }
+    },
+    {
+      "id": "sslcheck",
+      "name": "SSLCheck",
+      "repo": "SSLCheck",
+      "stars": 17,
+      "featured": false,
+      "tags": ["Security", "CLI", "Python"],
+      "description": "检查任意网站的 SSL 证书状态、有效期、颁发机构与安全等级，命令行一键查询。",
+      "link": "sslcheck/",
+      "external": false,
+      "cta": "查看项目",
+      "home": true,
+      "readme": {
+        "emoji": "🔒",
+        "title": "SSLCheck",
+        "url": "https://codertesla.github.io/sslcheck/",
+        "meta": "Security · CLI · Python",
+        "description": "A robust tool for monitoring SSL certificates, expiration dates, and security status."
+      }
+    },
+    {
+      "id": "bilibili-1-click-blocker",
+      "name": "bilibili-1-click-blocker",
+      "repo": "bilibili-1-click-blocker",
+      "stars": 21,
+      "featured": false,
+      "tags": ["用户脚本", "Bilibili", "JavaScript"],
+      "description": "油猴脚本：B 站首页和视频页一键拉黑 UP 主，清理你的推荐流。",
+      "link": "bilibili-1-click-blocker/",
+      "external": false,
+      "cta": "查看项目",
+      "home": true,
+      "readme": {
+        "emoji": "📺",
+        "title": "Bilibili 1-Click Blocker",
+        "url": "https://codertesla.github.io/bilibili-1-click-blocker/",
+        "meta": "Userscript · Bilibili · JavaScript",
+        "description": "Clean up your Bilibili feed by blocking unwanted content instantly."
+      }
+    },
+    {
+      "id": "bilibili-video-speed-controller",
+      "name": "bilibili-video-speed-controller",
+      "repo": "bilibili-video-speed-controller-userscript",
+      "stars": 1,
+      "featured": false,
+      "tags": ["用户脚本", "Bilibili", "JavaScript"],
+      "description": "油猴脚本：为 B 站视频提供精细的播放倍速控制。",
+      "link": "bilibili-video-speed-controller/",
+      "external": false,
+      "cta": "查看项目",
+      "home": false,
+      "readme": {
+        "emoji": "⏩",
+        "title": "Bilibili Speed Controller",
+        "url": "https://codertesla.github.io/bilibili-video-speed-controller/",
+        "meta": "Userscript · Bilibili · JavaScript",
+        "description": "Fine-tuned control over video playback speed on Bilibili."
+      }
+    }
+  ]
+}
