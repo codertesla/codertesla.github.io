@@ -1,24 +1,37 @@
 name: Project list sync
 
-# index.html and README.md are generated from data/projects.json.
-# This workflow fails when either file was edited by hand or the generator
-# was not re-run after a data change, so the two lists can never drift apart
-# again.
+# Generated files in this repo:
+#   index.html / README.md      <- data/projects.json       (scripts/build-projects.mjs)
+#   ai-coding-deals/index.html  <- data/ai-coding-deals.json (scripts/build_acd.py)
+#
+# This workflow fails when a generated file was edited by hand, or when the
+# generator was not re-run after a data change, so the sources and the pages
+# can never drift apart again.
 
 on:
   push:
     paths:
       - 'data/projects.json'
+      - 'data/ai-coding-deals.json'
       - 'index.html'
       - 'README.md'
+      - 'ai-coding-deals/index.html'
       - 'scripts/build-projects.mjs'
+      - 'scripts/build_acd.py'
+      - 'scripts/templates/acd.html.j2'
+      - 'scripts/requirements.txt'
       - '.github/workflows/projects-sync.yml'
   pull_request:
     paths:
       - 'data/projects.json'
+      - 'data/ai-coding-deals.json'
       - 'index.html'
       - 'README.md'
+      - 'ai-coding-deals/index.html'
       - 'scripts/build-projects.mjs'
+      - 'scripts/build_acd.py'
+      - 'scripts/templates/acd.html.j2'
+      - 'scripts/requirements.txt'
   workflow_dispatch:
 
 concurrency:
@@ -30,7 +43,7 @@ permissions:
 
 jobs:
   sync:
-    name: Generated files match projects.json
+    name: Generated files match their data sources
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -41,9 +54,26 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Verify generated files are in sync
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: scripts/requirements.txt
+
+      - name: Install page build dependencies
+        run: python -m pip install -r scripts/requirements.txt
+
+      - name: Verify project list is in sync
         run: |
           if ! node scripts/build-projects.mjs --check; then
             echo "::error file=data/projects.json::index.html 或 README.md 与 data/projects.json 不同步。请在本地运行 node scripts/build-projects.mjs 后提交生成结果。"
+            exit 1
+          fi
+
+      - name: Verify ai-coding-deals page is in sync
+        run: |
+          if ! python3 scripts/build_acd.py --check; then
+            echo "::error file=data/ai-coding-deals.json::ai-coding-deals/index.html 与 data/ai-coding-deals.json 不同步。请在本地运行 python3 scripts/build_acd.py 后提交生成结果。"
             exit 1
           fi

@@ -1,0 +1,299 @@
+{#-
+  AI 编程工具省钱指南 · 页面模板
+  结构层从 telegram-bots 的 templates/index.html.j2 演化而来：
+  骨架（header / hero / search / directory / footer）与 CSS 类名保持一致，
+  以便上游 UI 更新时可以整文件比对，只有内容语义换成「工具」。
+  新增内容块（零成本路径 / 决策矩阵 / 促销 / 学生权益 / 法则）用 acd- 前缀类名。
+-#}
+{% macro mark(text, small=False) -%}
+<span class="avatar{% if small %} avatar-small{% endif %}"><span class="avatar-fallback" aria-hidden="true">{{ text }}</span></span>
+{%- endmacro -%}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 编程工具省钱指南 | {{ total }} 款工具的免费额度、折扣与学生权益（{{ last_label }}）</title>
+  <meta name="description" content="{{ total }} 款 AI 编程工具的免费额度、订阅价格、学生权益与真实促销追踪。覆盖原生 IDE、编程插件、终端 CLI 与 API 算力底座四大类，含 {{ free_count }} 条零成本路径与 {{ promo_count }} 条在效促销，核验于 {{ last_label }}。">
+  <meta name="keywords" content="AI 编程工具,AI 编程省钱,Cursor 价格,Copilot 学生包,AI IDE 免费,Claude Code,GitHub Copilot,AI 编程订阅">
+  <meta property="og:title" content="AI 编程工具省钱指南 | {{ total }} 款工具的价格与免费额度">
+  <meta property="og:description" content="{{ total }} 款 AI 编程工具的免费额度、学生权益与促销追踪，含 {{ free_count }} 条零成本路径。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://codertesla.github.io/ai-coding-deals/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://codertesla.github.io/ai-coding-deals/">
+  <link rel="icon" type="image/svg+xml" href="/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/ai-coding-deals/" class="brand" aria-label="AI 编程工具省钱指南首页">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 6 3 12l5.5 6M15.5 6 21 12l-5.5 6" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>AI 编程省钱指南</span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#picks">主推路线</a>
+        <a href="#free-paths">零成本</a>
+        <a href="#matrix">选型</a>
+        <a href="#promos">促销</a>
+        <a href="#directory">全部工具</a>
+      </nav>
+      <a class="github-link" href="https://github.com/codertesla/ai-coding-deals" target="_blank" rel="noopener" aria-label="在 GitHub 查看项目">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.9c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z" fill="currentColor"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span>逐条实测核验 · {{ last_label }} 更新</p>
+          <h1>用最少的钱<br>用上<span>最强的</span> AI 编程</h1>
+          <p class="hero-intro">不堆砌套餐参数。从免费额度、学生权益、促销时效到真实使用场景，帮你判断哪一档值得付、哪一档可以省。</p>
+          <div class="hero-actions">
+            <a href="#directory" class="btn">对比全部工具<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="#free-paths" class="text-link">看看怎么零成本<span aria-hidden="true">↘</span></a>
+          </div>
+          <dl class="hero-stats">
+            <div><dt>收录工具</dt><dd>{{ total }}<span>款</span></dd></div>
+            <div><dt>工具分类</dt><dd>{{ cat_count }}<span>类</span></dd></div>
+            <div><dt>零成本路径</dt><dd>{{ free_count }}<span>条</span></dd></div>
+          </dl>
+        </div>
+{% if featured_tools %}
+        <aside class="hero-panel" aria-label="主推工具速览">
+          <div class="panel-heading"><span>主推工具</span><span class="panel-label">PICK</span></div>
+{% for tool in featured_tools %}
+          <a class="pulse-item" href="{{ tool.url }}" target="_blank" rel="noopener" aria-label="打开 {{ tool.name }}">
+            <span class="pulse-rank">{{ "%02d"|format(loop.index) }}</span>
+            {{ mark(tool.initial, small=True) }}
+            <span class="pulse-name">{{ tool.name }}<small>{{ tool.vendor }}</small></span>
+            <strong>{{ tool.price_short }}</strong>
+          </a>
+{% endfor %}
+          <a href="#directory" class="panel-link">查看全部 {{ total }} 款工具<span aria-hidden="true">→</span></a>
+        </aside>
+{% endif %}
+      </div>
+      <div class="container search-container">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input type="search" id="search" placeholder="搜索工具、厂商或场景，例如「免费」「学生」" aria-label="搜索工具" autocomplete="off">
+          <kbd>/</kbd>
+        </div>
+        <p>输入关键词，立即从 {{ total }} 款工具中筛选</p>
+      </div>
+    </section>
+
+    <div class="container content-shell">
+{% if picks %}
+      <section class="discovery-section" id="picks">
+        <div class="section-header">
+          <div><p class="section-kicker">EDITOR'S PICK</p><h2>四条主推路线</h2></div>
+          <p>按预算档位给出的整体方案，每条都已验证工具组合可用。</p>
+        </div>
+        <div class="acd-card-grid">
+{% for pick in picks %}
+          <article class="acd-card is-static">
+            <div class="acd-card-top">
+              <span class="acd-card-meta">PICK {{ "%02d"|format(loop.index) }}</span>
+              <span class="acd-card-tag">{{ pick.kicker }}</span>
+            </div>
+            <h3>{{ pick.title }}</h3>
+            <p>{{ pick.why }}</p>
+            <div class="acd-card-link">
+              <span>{{ pick.tool_names }}</span>
+              <span class="acd-card-price">{{ pick.price }}</span>
+            </div>
+          </article>
+{% endfor %}
+        </div>
+      </section>
+{% endif %}
+
+{% if free_paths %}
+      <section class="featured-section discovery-section" id="free-paths">
+        <div class="section-header">
+          <div><p class="section-kicker">FREE PATH</p><h2>零成本怎么用</h2></div>
+          <p>不花一分钱的六条组合路线，按敏感程度从云端排到本地。</p>
+        </div>
+        <div class="featured-grid">
+{% for path in free_paths %}
+          <a class="featured-card" href="{{ path.url or '#directory' }}"{% if path.url %} target="_blank" rel="noopener"{% endif %} aria-label="了解 {{ path.title }}">
+            <div class="card-topline">{{ mark(path.initial) }}<span class="category-tag">路径 {{ "%02d"|format(loop.index) }}</span></div>
+            <h3>{{ path.title }}</h3>
+            <p>{{ path.body }}</p>
+            <div class="card-footer"><span class="monthly">{{ path.tool_count }} 个工具</span><span class="card-handle">{{ path.tool_names }}</span></div>
+          </a>
+{% endfor %}
+        </div>
+      </section>
+{% endif %}
+
+{% if matrix %}
+      <section class="top10-section discovery-section" id="matrix">
+        <div class="section-header">
+          <div><p class="section-kicker">DECISION MATRIX</p><h2>按身份选方案</h2></div>
+          <p>不用读完所有套餐，先找到与你处境最接近的一行。</p>
+        </div>
+        <div class="acd-matrix">
+{% for row in matrix %}
+          <article class="acd-matrix-row">
+            <span class="acd-matrix-index">{{ "%02d"|format(loop.index) }}</span>
+            <div class="acd-matrix-main">
+              <h3>{{ row.profile }}</h3>
+              <p class="acd-matrix-combo">{{ row.combo }}</p>
+              <p class="acd-matrix-logic">{{ row.logic }}</p>
+            </div>
+          </article>
+{% endfor %}
+        </div>
+      </section>
+{% endif %}
+
+{% if promos or expired %}
+      <section class="discovery-section" id="promos">
+        <div class="section-header">
+          <div><p class="section-kicker">LIVE DEALS</p><h2>还在生效的促销</h2></div>
+          <p>只留在核验时确认可用的活动，过期条目移入下方归档，不再占版面。</p>
+        </div>
+{% if promos %}
+        <div class="acd-card-grid">
+{% for promo in promos %}
+          <a class="acd-card" href="{{ promo.url }}" target="_blank" rel="noopener" aria-label="打开 {{ promo.tool }}">
+            <div class="acd-card-top">
+              <span class="acd-card-meta">{{ promo.tool }}</span>
+              <span class="acd-card-tag is-alert">{{ promo.deadline_label }}</span>
+            </div>
+            <h3>{{ promo.title }}</h3>
+            <p>{{ promo.body }}</p>
+            <span class="acd-card-link"><span>{{ promo.url_label }}</span><span aria-hidden="true">→</span></span>
+          </a>
+{% endfor %}
+        </div>
+{% endif %}
+{% if expired %}
+        <details class="acd-expired">
+          <summary>已失效促销归档（{{ expired|length }} 条）</summary>
+          <ul>
+{% for item in expired %}
+            <li><span class="acd-expired-title">{{ item.title }}</span><span class="acd-expired-when">{{ item.when }}</span><p>{{ item.note }}</p></li>
+{% endfor %}
+          </ul>
+        </details>
+{% endif %}
+      </section>
+{% endif %}
+
+{% if students %}
+      <section class="discovery-section" id="students">
+        <div class="section-header">
+          <div><p class="section-kicker">STUDENT</p><h2>学生与教育权益</h2></div>
+          <p>通过教育认证即可获得的免费或折扣额度，申请门槛与所需材料逐条标注。</p>
+        </div>
+        <div class="acd-student-grid">
+{% for item in students %}
+          <a class="acd-student-card" href="{{ item.url }}" target="_blank" rel="noopener" aria-label="打开 {{ item.tool }}">
+            <span class="acd-student-tool">{{ item.tool }}</span>
+            <p>{{ item.benefit }}</p>
+            <span class="acd-student-link">{{ item.url_label }}<span aria-hidden="true">↗</span></span>
+          </a>
+{% endfor %}
+        </div>
+      </section>
+{% endif %}
+
+      <section class="directory" id="directory">
+        <div class="section-header directory-heading">
+          <div><p class="section-kicker">ALL TOOLS</p><h2>按类型对比</h2></div>
+          <p>{{ total }} 款工具的价格、额度与结论，按原生 IDE、插件、CLI 与算力底座分类。</p>
+        </div>
+        <div class="filter-bar" role="group" aria-label="按分类筛选">
+          <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">全部<span>{{ total }}</span></button>
+{% for section in sections %}
+          <button class="filter-chip" type="button" data-filter="{{ section.key }}" aria-pressed="false">{{ section.title }}<span>{{ section.count }}</span></button>
+{% endfor %}
+        </div>
+        <div class="results-bar">
+          <p id="results-status" role="status" aria-live="polite">{{ total }} 款工具 · {{ cat_count }} 个分类</p>
+          <button id="reset-filters" class="reset-button" type="button" hidden>清除筛选</button>
+        </div>
+
+        <div class="category-list">
+{% for section in sections %}
+          <section class="category-section" id="cat-{{ section.key }}" data-category="{{ section.key }}">
+            <div class="category-heading">
+              <div><h2>{{ section.title }}</h2><p>{{ section.desc }}</p></div>
+              <span>{{ section.count }} 款</span>
+            </div>
+{% for group in section.groups %}
+            <div class="bot-group">
+{% if group.title %}
+              <h3 class="subsection-title">{{ group.title }}</h3>
+{% endif %}
+              <div class="bot-grid">
+{% for tool in group.tools %}
+                <a class="bot-card" href="{{ tool.url }}" target="_blank" rel="noopener" aria-label="打开 {{ tool.name }}">
+                  <div class="bot-card-header">{{ mark(tool.initial) }}<span class="monthly">{{ tool.from }}</span></div>
+                  <h4>{{ tool.name }}</h4>
+                  <p>{{ tool.verdict }}</p>
+                  <div class="bot-card-footer"><span class="card-handle">{{ tool.vendor }}</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                </a>
+{% endfor %}
+              </div>
+            </div>
+{% endfor %}
+          </section>
+{% endfor %}
+        </div>
+        <div id="empty-state" class="empty-state" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m16 16 4 4M8.5 11h5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <h3>没有找到匹配的工具</h3>
+          <p>试试更短的关键词，或切换到其他分类。</p>
+          <button id="empty-reset" class="btn" type="button">查看全部工具</button>
+        </div>
+      </section>
+
+{% if rules %}
+      <section class="discovery-section" id="rules">
+        <div class="section-header">
+          <div><p class="section-kicker">PRINCIPLES</p><h2>七条省钱法则</h2></div>
+          <p>比价之外更重要的判断标准，来自本页所有条目的实测结论。</p>
+        </div>
+        <ol class="acd-rule-list">
+{% for rule in rules %}
+          <li class="acd-rule-item">
+            <span class="acd-rule-index">{{ "%02d"|format(loop.index) }}</span>
+            <div><h3>{{ rule.title }}</h3><p>{{ rule.body }}</p></div>
+          </li>
+{% endfor %}
+        </ol>
+      </section>
+{% endif %}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <a href="/ai-coding-deals/" class="footer-brand">AI 编程工具省钱指南</a>
+        <p>{{ total }} 款工具 · 核验于 {{ verified_time }} · 价格与额度以厂商官网为准</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/codertesla/ai-coding-deals" target="_blank" rel="noopener">GitHub</a>
+{% for source in sources %}
+        <a href="{{ source.url }}" target="_blank" rel="noopener">{{ source.label }}</a>
+{% endfor %}
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/search.js"></script>
+</body>
+</html>

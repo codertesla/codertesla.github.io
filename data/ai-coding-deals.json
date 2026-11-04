@@ -1,0 +1,826 @@
+{
+  "meta": {
+    "repo": "codertesla/ai-coding-deals",
+    "verified": "2026-11",
+    "source": "README.zh-CN.md",
+    "updated": "2026-11-04"
+  },
+  "categories": [
+    { "id": "ide", "label": "原生 IDE", "desc": "原生集成全局代码库索引、跨文件重构与终端沙箱执行能力的独立开发环境。" },
+    { "id": "plugin", "label": "编程插件", "desc": "直接安装在现有 VS Code 或 JetBrains IDE 中，提供行内补全、代码库问答与跨文件自主修改。" },
+    { "id": "cli", "label": "终端 CLI", "desc": "原生运行在命令行中的自主 Agent，直接读写本地代码库、执行测试并自动提交 Git 变更。" },
+    { "id": "api", "label": "API 与算力底座", "desc": "为 BYOK 客户端提供模型推理入口，决定你的 Token 单价上限。" }
+  ],
+  "picks": [
+    {
+      "kicker": "零预算",
+      "title": "Freebuff + Aider / Cline + 本地 Ollama",
+      "price": "$0",
+      "why": "日常云端任务走 Freebuff 免费调用 V4.1 Flash，核心敏感代码走本地 Ollama，订阅支出为零。",
+      "tools": ["freebuff", "aider", "cline", "ollama"]
+    },
+    {
+      "kicker": "$10 档稳健基座",
+      "title": "GitHub Copilot Pro",
+      "price": "$10/月",
+      "why": "大厂商业方案中月费最低，提供不限量行内补全、Next Edit 及每月 1,500 额度。",
+      "tools": ["copilot"]
+    },
+    {
+      "kicker": "主推 Agentic IDE",
+      "title": "Cursor Premium / Kiro Pro",
+      "price": "$30 · $20",
+      "why": "Cursor 交互手感与多模型生态最成熟；Kiro 主打规格驱动，且是 Amazon Q 用户的迁入地。",
+      "tools": ["cursor", "kiro"]
+    },
+    {
+      "kicker": "国内开发者",
+      "title": "WorkBuddy + 腾讯云模型广场",
+      "price": "赠额起步",
+      "why": "先用 2,000 邀请积分与各赠 100 万 Token 打磨 Kimi K3 与 V4.1 Flash，再按需接 $9.99 包月通道。",
+      "tools": ["codebuddy-cn", "tencent-models"]
+    }
+  ],
+  "tools": [
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "vendor": "Anysphere",
+      "cat": "ide",
+      "cats": ["ide"],
+      "featured": true,
+      "from": "免费档 / $8/月起",
+      "pricing": [
+        { "label": "免费", "price": "$0", "note": "功能限量" },
+        { "label": "Plus", "price": "$8/月", "note": "仅限 Grok 4.7 / 4.6 / 4.5 与 Composer 2.5 固定参数" },
+        { "label": "Premium", "price": "$30/月", "note": "第三方模型自该档开放" },
+        { "label": "Super", "price": "$100/月", "note": "" },
+        { "label": "Ultra", "price": "$200/月", "note": "" },
+        { "label": "Teams", "price": "$30 / $100 / $200", "note": "每席" },
+        { "label": "年付", "price": "$80 / $300 / $1,000 / $2,000", "note": "" }
+      ],
+      "verdict": "多模型协同与交互响应的标杆 Agentic IDE；老 Pro 用户切换档位前需重算额度。",
+      "detail": "现通过 The X Subscription 售卖（Grok、Cursor、X 合一订阅）。旧版套餐（Pro $20、Pro+ $60、Ultra $200、Teams Standard $40、Teams Premium $120）已对新注册关闭，存量用户继续有效。付费档共用一个跨 Cursor 与 Grok 的每周算力池；第三方模型按 API 目录价从预付额度扣费。邀请 5 折计划已于 2026-07-23 下线。",
+      "scenario": "以周额度支撑多文件协同修改、后台并行 Agent 与 Grok 4.7 调用，并与 Grok、X 共用一份订阅。",
+      "url": "https://cursor.com",
+      "urlLabel": "cursor.com"
+    },
+    {
+      "id": "devin",
+      "name": "Devin Desktop",
+      "vendor": "原 Windsurf",
+      "cat": "ide",
+      "cats": ["ide"],
+      "from": "免费档 / Pro $20/月",
+      "pricing": [
+        { "label": "免费", "price": "$0", "note": "轻量配额，无限 Tab 补全" },
+        { "label": "Pro", "price": "$20/月", "note": "免费调用 SWE 1.6 模型" },
+        { "label": "Max", "price": "$200/月", "note": "" },
+        { "label": "Teams", "price": "$80/月 + $40/席", "note": "基座 + 每席" }
+      ],
+      "verdict": "将长链路异步研发任务托管给 Devin Cloud，自动执行测试并提交 PR。",
+      "detail": "新用户绑定 Git 仓库完成引导立赠 $10 AI 额度；Pro 及以上档位免费调用 SWE 1.6 模型。GLM-5.2 / Kimi K2.7 限时免费已于 2026-07-05 结束。",
+      "scenario": "异步研发任务托管，让云端 Agent 跑完测试并提交 PR。",
+      "url": "https://devin.ai",
+      "urlLabel": "devin.ai"
+    },
+    {
+      "id": "antigravity",
+      "name": "Google Antigravity",
+      "vendor": "Google",
+      "cat": "ide",
+      "cats": ["ide"],
+      "featured": true,
+      "from": "免费层 / AI Pro $19.99/月",
+      "pricing": [
+        { "label": "免费层", "price": "$0", "note": "行内 Tab 补全全档位免费" },
+        { "label": "AI Plus", "price": "$7.99/月", "note": "" },
+        { "label": "AI Pro", "price": "$19.99/月", "note": "" },
+        { "label": "AI Ultra", "price": "$99.99–$200/月", "note": "原 $250" }
+      ],
+      "verdict": "全栈 Web 开发体验最完整的免费层，原生打通多 Agent 并行执行与内置浏览器沙箱调试。",
+      "detail": "全档位行内 Tab 补全完全免费；Ultra 顶配于 2026-05 从 $249.99 降至 $200；Agent 算力池每 5 小时重置一次，并设每周总上限。",
+      "scenario": "多 Agent 并行开发与内置浏览器实时交互调试的全栈 Web 工程。",
+      "url": "https://antigravity.google",
+      "urlLabel": "antigravity.google"
+    },
+    {
+      "id": "kiro",
+      "name": "Kiro",
+      "vendor": "AWS",
+      "cat": "ide",
+      "cats": ["ide"],
+      "from": "免费 50 credits / Pro $20/月",
+      "pricing": [
+        { "label": "免费", "price": "50 credits", "note": "" },
+        { "label": "Pro", "price": "$20/月", "note": "含 1,000 credits" },
+        { "label": "Pro+", "price": "$40/月", "note": "2,000 credits" },
+        { "label": "Pro Max", "price": "$100/月", "note": "5,000 credits" },
+        { "label": "Power", "price": "$200/月", "note": "10,000 credits" }
+      ],
+      "verdict": "规格驱动（Spec-driven）生产级交付，以及 Amazon Q Developer 插件用户的官方迁移目标。",
+      "detail": "支持年付折扣，超额按 $0.04/credit 计费。模型消耗倍率：Auto 1.0×、Sonnet 1.3×、Opus 4.8 2.2×、Haiku 0.4×、GLM-5 0.5×、Qwen3 Coder Next 0.05×。",
+      "scenario": "规格驱动（Spec-driven）交付流程，或作为 Amazon Q 插件的迁移落点。",
+      "url": "https://kiro.dev",
+      "urlLabel": "kiro.dev"
+    },
+    {
+      "id": "trae",
+      "name": "Trae",
+      "vendor": "字节跳动",
+      "cat": "ide",
+      "cats": ["ide"],
+      "from": "免费 / Pro $20/月",
+      "pricing": [
+        { "label": "免费", "price": "$0", "note": "月 5,000 次补全、2 路并发" },
+        { "label": "Pro", "price": "$20/月", "note": "含 $20 用量" },
+        { "label": "Pro+", "price": "$60/月", "note": "含 $60 用量，3×" },
+        { "label": "Ultra", "price": "$200/月", "note": "含 $200 用量，10×" }
+      ],
+      "verdict": "$20/月 的类 Cursor 交互体验，或直接用 trae.cn 零成本获取同等能力。",
+      "detail": "国内版（trae.cn）面向个人开发者完全免费，内置豆包与 DeepSeek 模型。",
+      "scenario": "想要类 Cursor 交互但预算有限，或直接走国内免费版。",
+      "url": "https://trae.ai",
+      "urlLabel": "trae.ai"
+    },
+    {
+      "id": "zcode",
+      "name": "ZCode",
+      "vendor": "智谱",
+      "cat": "ide",
+      "cats": ["ide"],
+      "from": "免费试用 / Coding Plan",
+      "pricing": [
+        { "label": "新用户", "price": "$0", "note": "多日高配额免费试用" },
+        { "label": "Coding Plan", "price": "GLM-5.3 系列", "note": "Flash 配额约为 GLM-5.3 的 3×" }
+      ],
+      "verdict": "围绕智谱 GLM-5.3 系列模型构建工作流的官方原生 IDE。",
+      "detail": "注册享多日高配额免费试用；Coding Plan 主打 GLM-5.3 与 GLM-5.3-Flash（Flash 可用配额约为 GLM-5.3 的 3×）。原 1.5× 配额加成已于 2026-06-30 结束。",
+      "scenario": "以 GLM 系列为主要模型的国内工作流。",
+      "url": "https://zcode.z.ai/cn/docs/welcome",
+      "urlLabel": "zcode.z.ai"
+    },
+    {
+      "id": "codebuddy-intl",
+      "name": "CodeBuddy",
+      "vendor": "腾讯国际站",
+      "cat": "ide",
+      "cats": ["ide"],
+      "from": "免费 250 credits / Pro $9.95/月",
+      "pricing": [
+        { "label": "免费", "price": "250 credits", "note": "每两周自动发放" },
+        { "label": "Pro", "price": "$9.95/月", "note": "半价促销，原价 $19.90" },
+        { "label": "Pro 年付", "price": "$119.40/年", "note": "1,000 credits/月" },
+        { "label": "Team", "price": "$40/席/月", "note": "" }
+      ],
+      "verdict": "以主流 IDE 一半的月费（$9.95）获取标准化辅助开发环境。",
+      "detail": "每两周自动发放 250 免费 credits；加量包 $9.95 / 1,000 credits 起。DeepSeek 官方合作伙伴，支持 V4.1 Flash。",
+      "scenario": "海外腾讯云生态团队，或需要比主流 IDE 更低的月费。",
+      "url": "https://www.codebuddy.ai/",
+      "urlLabel": "codebuddy.ai"
+    },
+    {
+      "id": "codebuddy-cn",
+      "name": "CodeBuddy / WorkBuddy",
+      "vendor": "腾讯国内站",
+      "cat": "ide",
+      "cats": ["ide"],
+      "featured": true,
+      "verified": true,
+      "from": "体验版免费 / 标准版 ¥99/月",
+      "pricing": [
+        { "label": "体验版", "price": "免费", "note": "500 credits/月" },
+        { "label": "标准版", "price": "¥99/月", "note": "2,000 + 赠送 2,000 = 4,000 积分" },
+        { "label": "高级版", "price": "¥199/月", "note": "4,000 + 5,000 = 9,000 积分" },
+        { "label": "旗舰版", "price": "¥999/月", "note": "20,000 + 30,000 积分" },
+        { "label": "Buddy One VIP", "price": "¥700/月", "note": "原价 ¥1,399" },
+        { "label": "长周期", "price": "7 折 / 5.6 折", "note": "连续包月 7 折、连续包年 5.6 折" }
+      ],
+      "verdict": "国内新用户赠送额度最厚的原生 IDE；零成本实测 Kimi K3 与 DeepSeek V4.1 Flash 优先走这条。",
+      "detail": "通过 WorkBuddy 邀请链接（微信登录）注册立得 2,000 积分新用户礼包，有效期 1 个月。叠加站内新手任务后，官方与社区宣传口径为最高累计 3,600 积分（约为标准版首月 4,000 积分的 90%）——超出礼包的 1,600 积分并未在邀请页逐项列明，请按上限理解而非承诺。注册后 30 天内首次付费升级个人版，双方再各得 500 积分（有效期 6 个月）。DeepSeek 官方合作伙伴，已接入 V4.1 Flash 与 Kimi K3（消耗倍率约 1.62×）。HY3 全员免费期已于 2026-07-22 结束。",
+      "scenario": "国内腾讯云生态研发，以及用首月积分充分体验 Kimi K3 与 V4.1 Flash 后再决定是否付 ¥99。",
+      "url": "https://www.workbuddy.cn/events/invite?inviteCode=qm4gyc1daqn",
+      "urlLabel": "workbuddy.cn"
+    },
+    {
+      "id": "qoder",
+      "name": "Qoder CN",
+      "vendor": "原通义灵码 · 阿里",
+      "cat": "ide",
+      "cats": ["ide"],
+      "from": "社区版免费 / 专业版 ¥59/月",
+      "pricing": [
+        { "label": "社区版", "price": "免费", "note": "限量，含 2 周 Pro 试用 + 300 credits" },
+        { "label": "专业版", "price": "¥59/月", "note": "2,000 credits" },
+        { "label": "企业版", "price": "¥99–¥199", "note": "每席/月" }
+      ],
+      "verdict": "阿里云技术栈团队在单 IDE 内按需切换 Qwen、GLM 与 Kimi 模型。",
+      "detail": "2026-05-20 完成品牌更名与调价，大幅收紧免费层补全频次与对话配额，终结此前无限免费政策。",
+      "scenario": "阿里云技术栈，需要在单 IDE 内切换多家模型。",
+      "url": "https://cn.aliyun.com/product/lingma",
+      "urlLabel": "cn.aliyun.com"
+    },
+    {
+      "id": "zed",
+      "name": "Zed",
+      "vendor": "Zed Industries",
+      "cat": "ide",
+      "cats": ["ide"],
+      "from": "免费 / 学生送 1 年 Pro",
+      "pricing": [
+        { "label": "核心编辑器", "price": "免费", "note": "开源" },
+        { "label": "Zed Pro", "price": "低门槛月付", "note": "学生认证免费 1 年，含每月约 $10 AI 额度" }
+      ],
+      "verdict": "重视毫秒级键盘响应、本地优先架构及高校免费算力额度的开发者。",
+      "detail": "Rust 原生开源编辑器；高校学生认证免费领 1 年 Zed Pro 会员，含每月约 $10 AI 模型调用额度。",
+      "scenario": "本地优先、低延迟的编辑体验；学生党可直接白拿一年 Pro。",
+      "url": "https://zed.dev",
+      "urlLabel": "zed.dev"
+    },
+    {
+      "id": "copilot",
+      "name": "GitHub Copilot",
+      "vendor": "GitHub",
+      "cat": "plugin",
+      "cats": ["plugin"],
+      "from": "免费 2,000 次补全 / Pro $10/月",
+      "pricing": [
+        { "label": "免费", "price": "2,000 次/月", "note": "代码补全" },
+        { "label": "Pro", "price": "$10/月", "note": "1,500 credits" },
+        { "label": "Pro+", "price": "$39/月", "note": "7,000 credits" },
+        { "label": "Max", "price": "$100/月", "note": "20,000 credits" },
+        { "label": "Business", "price": "$19/席", "note": "1,900 credits" },
+        { "label": "Enterprise", "price": "$39/席", "note": "3,900 credits" }
+      ],
+      "verdict": "$10/月获取无限量丝滑行内补全，并与 GitHub PR 及 Actions 深度联动。",
+      "detail": "个人版 Pro / Pro+ / Max 自 2026-06-17 起恢复开放注册；企业版信用卡 / PayPal 通道自 2026-09-01 起重开。1 credit = $0.01；付费档行内补全与 Next Edit 不限量免费。学生可免费领 Pro。企业版 3,000 / 7,000 临时促销额度已于 2026-09-01 恢复为 1,900 / 3,900。",
+      "scenario": "以最低月费获取无限行内补全，并绑定 GitHub 工作流。",
+      "url": "https://github.com/features/copilot",
+      "urlLabel": "github.com/features/copilot"
+    },
+    {
+      "id": "continue",
+      "name": "Continue.dev",
+      "vendor": "开源",
+      "cat": "plugin",
+      "cats": ["plugin"],
+      "from": "开源免费",
+      "pricing": [
+        { "label": "核心插件", "price": "$0", "note": "100% 开源" },
+        { "label": "Team", "price": "约 $20/席/月", "note": "" }
+      ],
+      "verdict": "企业内网隐私合规、自定义模型路由及纯本地离线推理。",
+      "detail": "100% 开源，支持自带 API Key（BYOK）或连接本地 Ollama 模型，软件授权费为 $0。",
+      "scenario": "内网合规、自定义模型路由、纯本地离线推理。",
+      "url": "https://www.continue.dev",
+      "urlLabel": "continue.dev"
+    },
+    {
+      "id": "cline",
+      "name": "Cline",
+      "vendor": "Cline",
+      "cat": "plugin",
+      "cats": ["plugin", "cli"],
+      "featured": true,
+      "verified": true,
+      "from": "开源免费 / ClinePass $9.99/月",
+      "pricing": [
+        { "label": "核心插件", "price": "$0", "note": "开源 BYOK" },
+        { "label": "ClinePass", "price": "$9.99/月", "note": "通用插件 / CLI / 桌面端" },
+        { "label": "CLI 开源版", "price": "$0", "note": "npm i -g cline" }
+      ],
+      "install": "npm i -g cline",
+      "verdict": "固定 $9.99/月畅用主流开源权重编程模型，直接集成在自主性极强的 Cline 代理框架内。",
+      "detail": "ClinePass 打包 GLM 5.3 Flash / 5.3 / 5.2、Kimi K3、Kimi K2.7 Code / K2.6、DeepSeek V4 Pro / V4 Flash、MiniMax M3、MiMo V2.5、Qwen3.7-Max / 3.7-Plus / 3.8-Max，通用于 IDE 插件、CLI 与桌面端，配额约为标准 API 的 2–5×，无需另行管理厂商 Key。早期 $1.99 首发价已下线，以结账页实时标价为准。",
+      "scenario": "在 VS Code 内执行自主多步文件改写与终端命令，兼顾 BYOK 灵活性与包月低成本。",
+      "url": "https://cline.bot",
+      "urlLabel": "cline.bot"
+    },
+    {
+      "id": "roo",
+      "name": "Roo Code",
+      "vendor": "Roo",
+      "cat": "plugin",
+      "cats": ["plugin"],
+      "from": "开源免费",
+      "pricing": [
+        { "label": "插件", "price": "$0", "note": "开源 BYOK" }
+      ],
+      "verdict": "在 Cline 架构基础上细分 Architect、Coder、Debugger 等多角色自定义 Agent 工作流。",
+      "detail": "零软件加价，接入个人或企业 API Key 后仅按上游模型实际 Token 消耗计费。",
+      "scenario": "需要多角色（Architect / Coder / Debugger）拆分工作流的团队。",
+      "url": "https://roocode.com",
+      "urlLabel": "roocode.com"
+    },
+    {
+      "id": "augment",
+      "name": "Augment Code",
+      "vendor": "Augment",
+      "cat": "plugin",
+      "cats": ["plugin"],
+      "from": "Community 免费 / Business $100/月",
+      "pricing": [
+        { "label": "Community", "price": "免费", "note": "功能受限" },
+        { "label": "试用", "price": "30,000 credits", "note": "需绑卡" },
+        { "label": "Business", "price": "$100/月一口价", "note": "最多 50 席，含 $100 用量" }
+      ],
+      "verdict": "维护超大型单体仓库（Monorepo）的中小研发团队，多人平摊席位成本极低。",
+      "detail": "提供 3 万 credits 试用；Business 档 $100/月一口价覆盖最多 50 个席位，免收按人头递增的席位税。",
+      "scenario": "大型 Monorepo，多人共享一份定额。",
+      "url": "https://www.augmentcode.com",
+      "urlLabel": "augmentcode.com"
+    },
+    {
+      "id": "amazonq",
+      "name": "Amazon Q Developer",
+      "vendor": "AWS",
+      "cat": "plugin",
+      "cats": ["plugin"],
+      "status": "ended",
+      "from": "已停止新注册",
+      "pricing": [
+        { "label": "新注册", "price": "2026-05-15 起停止", "note": "IDE 插件与付费订阅" },
+        { "label": "停服", "price": "2027-04-30", "note": "存量用户可过渡使用" }
+      ],
+      "verdict": "存量 AWS 插件团队向 kiro.dev 平滑迁移的过渡期维护。",
+      "detail": "存量用户可过渡使用至 2027-04-30，AWS 控制台内嵌 Q 功能保留。请勿在该插件上新建项目，直接迁移至 Kiro。",
+      "scenario": "仅作存量过渡，新项目不要选它。",
+      "url": "https://aws.amazon.com/q/developer/",
+      "urlLabel": "aws.amazon.com/q/developer"
+    },
+    {
+      "id": "supermaven",
+      "name": "Supermaven",
+      "vendor": "Supermaven",
+      "cat": "plugin",
+      "cats": ["plugin"],
+      "from": "免费层 / Pro $10/月",
+      "pricing": [
+        { "label": "免费层", "price": "$0", "note": "高速补全" },
+        { "label": "Pro", "price": "$10/月", "note": "1M 上下文、风格自适应 + $5 对话额度" },
+        { "label": "Team", "price": "$10/席/月", "note": "" }
+      ],
+      "verdict": "对敲击补全延迟极度敏感、需要百万 Token 级上下文感知的高频编码。",
+      "detail": "免费档已支持大型代码库极速补全；Pro 档提供 30 天免费试用。",
+      "scenario": "追求补全延迟与超大上下文的场景。",
+      "url": "https://supermaven.com",
+      "urlLabel": "supermaven.com"
+    },
+    {
+      "id": "qodo",
+      "name": "Qodo",
+      "vendor": "原 CodiumAI",
+      "cat": "plugin",
+      "cats": ["plugin"],
+      "from": "Developer 免费 / Teams $30/席",
+      "pricing": [
+        { "label": "Developer", "price": "免费", "note": "每月 30 次 PR 审查 + 250 IDE/CLI credits" },
+        { "label": "Teams", "price": "$30/席/月", "note": "年付；月付 $38" }
+      ],
+      "verdict": "自动化补齐单元测试覆盖率、在合并前拦截 PR 边界缺陷。",
+      "detail": "免费档即可覆盖日常单元测试自动生成与每月 30 次组织级 PR 自动化代码审查。",
+      "scenario": "测试覆盖率补强与 PR 阶段的缺陷拦截。",
+      "url": "https://www.qodo.ai",
+      "urlLabel": "qodo.ai"
+    },
+    {
+      "id": "cody",
+      "name": "Sourcegraph Cody",
+      "vendor": "Sourcegraph",
+      "cat": "plugin",
+      "cats": ["plugin"],
+      "status": "legacy",
+      "from": "仅企业订阅",
+      "pricing": [
+        { "label": "企业", "price": "约 $59/席/月", "note": "年付" }
+      ],
+      "verdict": "个人档已下线，平替走 Amp 或 Continue.dev。",
+      "detail": "2025-07 下线个人 Free 与 Pro 计划，官方引导个人开发者迁往 Amp。",
+      "scenario": "仅企业采购场景仍可选；个人请改用平替。",
+      "url": "https://ampcode.com",
+      "urlLabel": "ampcode.com（平替）"
+    },
+    {
+      "id": "tabnine",
+      "name": "Tabnine",
+      "vendor": "Tabnine",
+      "cat": "plugin",
+      "cats": ["plugin"],
+      "status": "legacy",
+      "from": "仅企业订阅",
+      "pricing": [
+        { "label": "企业", "price": "$39–$59/席/月", "note": "年付" }
+      ],
+      "verdict": "个人免费版与学生计划已关停，平替走 Cline / Continue.dev / Aider。",
+      "detail": "2025-04 关停个人免费版、个人付费版及学生计划。",
+      "scenario": "仅企业采购仍可用；个人开发者请直接换开源客户端。",
+      "url": "https://www.tabnine.com",
+      "urlLabel": "tabnine.com"
+    },
+    {
+      "id": "freebuff",
+      "name": "Freebuff",
+      "vendor": "Codebuff 团队",
+      "cat": "cli",
+      "cats": ["cli"],
+      "featured": true,
+      "verified": true,
+      "from": "免费（广告支持）",
+      "pricing": [
+        { "label": "全端", "price": "€0", "note": "广告支持，免绑卡免 API Key" }
+      ],
+      "install": "npm install -g freebuff",
+      "verdict": "零成本体验 DeepSeek V4.1 Flash 的首选通道；一行 npm install -g freebuff 即可启动终端 Agent。",
+      "detail": "免 API Key、免绑卡；上游支持 DeepSeek V4.1 Flash（含旧 V4 路由）、Kimi 与 MiniMax，覆盖 CLI、Web、Chat、Desktop 与移动端（Android 已上线，iOS 即将支持）。高频会话触发日限额后自动降级至轻量模型。由 Codebuff 团队出品，作为独立免费产品线运营。",
+      "scenario": "零预算在命令行直接调用 DeepSeek V4.1 Flash，免去一切密钥配置。",
+      "url": "https://freebuff.com/",
+      "urlLabel": "freebuff.com"
+    },
+    {
+      "id": "codebuff",
+      "name": "Codebuff",
+      "vendor": "Codebuff",
+      "cat": "cli",
+      "cats": ["cli"],
+      "from": "订阅 $100/月 · 按量 $0.01/credit",
+      "pricing": [
+        { "label": "1×", "price": "$100/月", "note": "" },
+        { "label": "2.5×", "price": "$200/月", "note": "" },
+        { "label": "7×", "price": "$500/月", "note": "" },
+        { "label": "按量", "price": "$0.01/credit", "note": "新注册赠 500 credits" }
+      ],
+      "verdict": "深度代码库索引与高并发终端重构，不受免费层降级与日限额约束。",
+      "detail": "新注册即赠 500 credits（可支撑新项目数小时高强度开发），随时可取消。与 Freebuff 同属一家公司，定位商业高阶版。",
+      "scenario": "需要稳定高配额、不接受免费层降级的深度重构。",
+      "url": "https://www.codebuff.com",
+      "urlLabel": "codebuff.com"
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "vendor": "Anthropic",
+      "cat": "cli",
+      "cats": ["cli"],
+      "from": "Pro $17/月（年付）",
+      "pricing": [
+        { "label": "Pro", "price": "$17/月", "note": "年付；月付 $20" },
+        { "label": "Max", "price": "$100 / $200", "note": "5× / 20×" },
+        { "label": "Team", "price": "$20–$100", "note": "每席/月" }
+      ],
+      "verdict": "跨模块复杂架构重构、深层疑难 Bug 定位及百万 Token 上下文全局推理。",
+      "detail": "年付约享 85 折；配额按 5 小时滚动窗口与 Claude 网页端共享，Max 档叠加双周限额（Claude 免费版不含此功能）。",
+      "scenario": "超大重构与疑难排障，作为 Cursor 之外的第二条重武器。",
+      "url": "https://www.claude.com/product/claude-code",
+      "urlLabel": "claude.com/claude-code"
+    },
+    {
+      "id": "grok",
+      "name": "Grok Build",
+      "vendor": "xAI",
+      "cat": "cli",
+      "cats": ["cli"],
+      "featured": true,
+      "verified": true,
+      "from": "7 天免费试用 / $30/月",
+      "pricing": [
+        { "label": "试用", "price": "7 天 $0", "note": "需绑卡，第 7 天前取消不扣费" },
+        { "label": "SuperGrok", "price": "$30/月", "note": "含 Grok 4.5+ 与 Grok Build 额度" },
+        { "label": "免费层", "price": "$0", "note": "仅限网页问答" }
+      ],
+      "verdict": "用 7 天免费窗口在终端实测 xAI 前沿编码模型的真实工程表现。",
+      "detail": "在 grok.com/plans 开通 7 天 SuperGrok 免费试用，共享 Grok 4.5+ 与 Grok Build 正式付费额度；需绑信用卡，第 7 天前取消免扣 $30/月，逾期自动续费。仅限从未订阅过的新账号。",
+      "scenario": "一次性压测 Grok 4.5+ 与终端 Agent，记得在试用期结束前取消。",
+      "url": "https://grok.com/plans",
+      "urlLabel": "grok.com/plans"
+    },
+    {
+      "id": "kimi-code",
+      "name": "Kimi Code",
+      "vendor": "月之暗面",
+      "cat": "cli",
+      "cats": ["cli"],
+      "from": "Adagio 免费 / Andante ¥49/月",
+      "pricing": [
+        { "label": "Adagio", "price": "免费", "note": "" },
+        { "label": "Andante", "price": "¥49/月", "note": "" },
+        { "label": "Moderato", "price": "¥99/月", "note": "国际 $19" },
+        { "label": "Allegretto", "price": "¥199/月", "note": "" },
+        { "label": "Allegro", "price": "¥699/月", "note": "" }
+      ],
+      "verdict": "以包月会员额度池统一调用 Kimi K3 网页端与 Kimi Code 终端代理。",
+      "detail": "一期邀请抽奖已结束。旗舰 Kimi K3 已全线接入 Web、Code 与 API。想零成本实测 Kimi K3 建议先领 WorkBuddy 注册积分。",
+      "scenario": "国内模型重度用户，想用一份会员覆盖网页端与终端。",
+      "url": "https://www.kimi.com/membership/pricing",
+      "urlLabel": "kimi.com/membership/pricing"
+    },
+    {
+      "id": "codex",
+      "name": "OpenAI Codex",
+      "vendor": "OpenAI",
+      "cat": "cli",
+      "cats": ["cli"],
+      "featured": true,
+      "from": "ChatGPT 免费版内置",
+      "pricing": [
+        { "label": "免费", "price": "$0", "note": "随 ChatGPT 免费版，5 小时滚动窗口限额" },
+        { "label": "Go", "price": "$8/月", "note": "" },
+        { "label": "Plus", "price": "$20/月", "note": "" },
+        { "label": "Pro", "price": "$100–$200/月", "note": "" }
+      ],
+      "verdict": "零门槛启用 OpenAI 官方编程工作流；已有 ChatGPT 免费账号即可开箱即用。",
+      "detail": "ChatGPT 免费账号免绑卡直接用；支持填入个人 OpenAI API Key 按量计费以突破窗口限制（不含云端沙箱）。覆盖 Web、CLI 与 macOS / Windows 桌面端。",
+      "scenario": "已有 ChatGPT 账号，零新增订阅费激活云端沙箱与本地终端 Agent。",
+      "url": "https://openai.com/codex",
+      "urlLabel": "openai.com/codex"
+    },
+    {
+      "id": "gemini-cli",
+      "name": "Gemini CLI / Antigravity CLI",
+      "vendor": "Google",
+      "cat": "cli",
+      "cats": ["cli"],
+      "from": "免费层开放",
+      "pricing": [
+        { "label": "免费层", "price": "$0", "note": "每日请求配额充裕，无需绑卡" }
+      ],
+      "verdict": "超长上下文代码库检索、日志分析与终端脚本批处理。",
+      "detail": "无需绑卡或订阅，免费层每日调用上限宽松。",
+      "scenario": "长上下文检索与脚本批处理。",
+      "url": "https://antigravity.google",
+      "urlLabel": "antigravity.google"
+    },
+    {
+      "id": "aider",
+      "name": "Aider",
+      "vendor": "开源",
+      "cat": "cli",
+      "cats": ["cli"],
+      "from": "开源免费 BYOK",
+      "pricing": [
+        { "label": "软件", "price": "$0", "note": "BYOK 或本地 Ollama" }
+      ],
+      "verdict": "Git 原生结对编程，自动生成规范 Commit 记录，兼容 75+ 款商业与开源模型。",
+      "detail": "软件完全免费；仅支付上游 LLM API 实际 Token 消耗，接入本地 Ollama 模型则为 $0。",
+      "scenario": "想用最低成本把任意模型接进 Git 工作流。",
+      "url": "https://aider.chat",
+      "urlLabel": "aider.chat"
+    },
+    {
+      "id": "amp",
+      "name": "Amp",
+      "vendor": "Sourcegraph",
+      "cat": "cli",
+      "cats": ["cli"],
+      "from": "按量计费，首充 $5",
+      "pricing": [
+        { "label": "按量", "price": "零加价透传", "note": "首充门槛 $5" }
+      ],
+      "verdict": "不设上下文窗口硬上限，按原始 Token 成本在多模型间动态路由。",
+      "detail": "按原始 API 零加价透传，全程无广告；原每日约 $10 的按小时免费补充额度自 2026-05 起对部分账号已暂停或缩减。",
+      "scenario": "不想要订阅制、按实际用量付费的团队。",
+      "url": "https://ampcode.com",
+      "urlLabel": "ampcode.com"
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode Go",
+      "vendor": "OpenCode",
+      "cat": "cli",
+      "cats": ["cli"],
+      "featured": true,
+      "verified": true,
+      "from": "开源 $0 / Go $10/月",
+      "pricing": [
+        { "label": "开源版", "price": "$0", "note": "BYOK" },
+        { "label": "Go", "price": "$10/月", "note": "含 $100/月 Flash 额度" },
+        { "label": "Go Plus", "price": "$40/月", "note": "额度 2×" },
+        { "label": "Go Teams", "price": "$20/席/月", "note": "" }
+      ],
+      "verdict": "付费调用 DeepSeek V4.1 Flash 的最高性价比方案：$100 额度、与官方一致的 Token 单价，外加可移植 API Key。",
+      "detail": "通过邀请链接订阅双方各得 $5 Go 用量。DeepSeek V4.1 Flash 月额度 $100（模型 ID deepseek-v4.1-flash；5 小时窗口 $20、每周 $50），DeepSeek V4 Pro 月额度 $15；另含 Grok 4.7、Kimi K3 / K3.1 Pro、GLM-5.3 / 5.3-Flash、Qwen3.8 Max/Flash、MiniMax M3、GPT 6 Luna、Claude Haiku 5.5、Gemini 4 Argon 等约 30 款模型。触顶后自动回落免费模型（Beam Free、Iceman Contributor Free）；开启 Extra Usage 则回落按量余额。首月 $5 活动已于 2026-08-24 结束。",
+      "scenario": "需要稳定高配额与可移植 API Key 时选 Go 档；只做轻量试验先用开源版。",
+      "url": "https://opencode.ai",
+      "urlLabel": "opencode.ai"
+    },
+    {
+      "id": "crush",
+      "name": "Crush",
+      "vendor": "Charm",
+      "cat": "cli",
+      "cats": ["cli"],
+      "from": "开源免费 BYOK",
+      "pricing": [
+        { "label": "软件", "price": "$0", "note": "接入任意 API Key 按量付费" }
+      ],
+      "verdict": "Charm 团队出品的高颜值终端交互界面（TUI），支持多模型灵活路由。",
+      "detail": "零软件授权费，接入任意自定义 API Key 按量付费。",
+      "scenario": "喜欢终端 TUI 手感、需要多模型路由。",
+      "url": "https://github.com/charmbracelet/crush",
+      "urlLabel": "github.com/charmbracelet/crush"
+    },
+    {
+      "id": "goose",
+      "name": "Goose",
+      "vendor": "Block",
+      "cat": "cli",
+      "cats": ["cli"],
+      "from": "开源免费",
+      "pricing": [
+        { "label": "软件", "price": "$0", "note": "本地模型或自有 API Key" }
+      ],
+      "verdict": "原生围绕 MCP（Model Context Protocol）插件生态构建的可扩展本地自动化 Agent。",
+      "detail": "零软件授权费，支持本地模型或自有 API Key。",
+      "scenario": "想以 MCP 插件拼装自己的本地自动化流程。",
+      "url": "https://block.github.io/goose",
+      "urlLabel": "block.github.io/goose"
+    },
+    {
+      "id": "qwen-code",
+      "name": "Qwen Code",
+      "vendor": "阿里 · 开源",
+      "cat": "cli",
+      "cats": ["cli"],
+      "from": "开源免费",
+      "pricing": [
+        { "label": "软件", "price": "$0", "note": "搭配本地或云端 Qwen 模型" }
+      ],
+      "verdict": "针对 Qwen3 Coder 系列模型深度调优的低成本终端编码方案。",
+      "detail": "搭配本地或云端通义千问模型享受零软件授权费。",
+      "scenario": "以 Qwen3 Coder 为主力的低成本终端方案。",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "urlLabel": "github.com/QwenLM/qwen-code"
+    },
+    {
+      "id": "warp",
+      "name": "Warp",
+      "vendor": "Warp",
+      "cat": "cli",
+      "cats": ["cli"],
+      "status": "legacy",
+      "statusLabel": "免费 AI 额度已取消",
+      "from": "终端免费 / Build $20/月",
+      "pricing": [
+        { "label": "终端", "price": "免费", "note": "不含云端 AI 额度" },
+        { "label": "Build", "price": "$20/月", "note": "内置 AI" }
+      ],
+      "verdict": "免费版已不含 AI 额度，需自带 Key，平替走 Cursor 或开源 CLI Agent。",
+      "detail": "取消免费版附赠的云端 AI 额度；免费用户仅能通过 BYOK 模式填入自有 OpenAI / Anthropic / Google API Key。",
+      "scenario": "只把它当终端用；想要 AI 得自己配 Key。",
+      "url": "https://www.warp.dev",
+      "urlLabel": "warp.dev"
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama Cloud",
+      "vendor": "Ollama",
+      "cat": "api",
+      "cats": ["api", "cli"],
+      "from": "Free $0 / Pro $20/月",
+      "pricing": [
+        { "label": "Free", "price": "$0", "note": "1 路云端并发；本地模型永久免费" },
+        { "label": "Pro", "price": "$20/月", "note": "$200/年，50× 云端用量，3 路并发" },
+        { "label": "Max", "price": "$100/月", "note": "10 路并发" }
+      ],
+      "verdict": "保持纯正本地优先工作流，同时按需弹性调用云端大参数模型，免管多厂商 Key。",
+      "detail": "本地运行模型永久无限免费；云端算力按 GPU 时间计量，设 5 小时会话与 7 天周度重置窗口。",
+      "scenario": "本地优先，但偶尔需要更大参数模型的弹性算力。",
+      "url": "https://ollama.com/pricing",
+      "urlLabel": "ollama.com/pricing"
+    },
+    {
+      "id": "tencent-models",
+      "name": "腾讯云 AI 模型广场",
+      "vendor": "腾讯云",
+      "cat": "api",
+      "cats": ["api"],
+      "featured": true,
+      "verified": true,
+      "from": "各赠 100 万 Token / HY3 ¥28/月",
+      "pricing": [
+        { "label": "新用户", "price": "$0", "note": "语言与多模态模型各赠 100 万 Token，90 天有效" },
+        { "label": "Hy Token Plan", "price": "¥28/月", "note": "混元 HY3，3,500 万 Token" }
+      ],
+      "verdict": "国内开源 BYOK 客户端的首选低成本 API 底座；一张 Key 即可在 Aider、Cline、Continue 中切换多款旗舰模型。",
+      "detail": "新用户进入模型广场右上角点击「新用户福利免费体验」领取，覆盖 HY3、GLM、DeepSeek、Kimi Code 等。",
+      "scenario": "国内 BYOK 客户端的低成本 API 底座。",
+      "url": "https://curl.qcloud.com/PN0cvBnI",
+      "urlLabel": "腾讯云模型广场"
+    },
+    {
+      "id": "nvidia-nim",
+      "name": "NVIDIA NIM",
+      "vendor": "NVIDIA",
+      "cat": "api",
+      "cats": ["api"],
+      "from": "免费（约 40 RPM）",
+      "pricing": [
+        { "label": "免费额度", "price": "$0", "note": "约 40 RPM，注册需手机验证码" }
+      ],
+      "verdict": "免费 OpenAI 兼容推理接口，适合原型开发与横向评测，但无生产 SLA。",
+      "detail": "凭单个 API Key 调用庞大开源模型目录，base_url 为 https://integrate.api.nvidia.com/v1。社区实测首选模型 nvidia/nemotron-3-super-120b-a12b，响应快且 message.content 输出稳定。",
+      "scenario": "原型开发、模型横向评测；不要用于对 SLA 有要求的生产。",
+      "url": "https://build.nvidia.com/",
+      "urlLabel": "build.nvidia.com"
+    }
+  ],
+  "freePaths": [
+    {
+      "title": "免 Key 广告支持全免费 Agent",
+      "body": "Freebuff 提供 CLI（npm install -g freebuff）、Web、Desktop 与 Chat 全端支持，免绑卡直连 DeepSeek V4.1 Flash、Kimi 与 MiniMax。由 Codebuff 团队出品，作为独立免费产品线运营。",
+      "tools": ["freebuff"]
+    },
+    {
+      "title": "开源客户端 + 本地模型（$0 纯本地）",
+      "body": "使用 Aider、Continue.dev、Cline 或 OpenCode 接入本地 Ollama 模型，软件与算力成本均为 $0，代码完全不出本机。",
+      "tools": ["aider", "continue", "cline", "opencode", "ollama"]
+    },
+    {
+      "title": "既有免费账号直接复用",
+      "body": "OpenAI Codex（ChatGPT 免费版与 Plus 直接内置）、GitHub Copilot Free（每月 2,000 次代码补全），不必新增任何订阅。",
+      "tools": ["codex", "copilot"]
+    },
+    {
+      "title": "大厂 IDE 高配额免费层",
+      "body": "Google Antigravity 行内 Tab 补全免费且每 5 小时重置 Agent 算力池；Cursor Free 档功能限量但可用。",
+      "tools": ["antigravity", "cursor"]
+    },
+    {
+      "title": "免费 OpenAI 兼容推理接口",
+      "body": "NVIDIA NIM 凭单个 API Key 即可调用庞大开源模型目录，速率上限约 40 RPM，适合原型开发与横向评测。",
+      "tools": ["nvidia-nim"]
+    },
+    {
+      "title": "腾讯云 90 天百万 Token 体验池",
+      "body": "新用户领取福利后，每款语言模型与多模态模型均获 100 万免费 Token（90 天有效）；混元 HY3 另有 ¥28/月包 3,500 万 Token，适合搭配 Aider、Cline 长期使用。",
+      "tools": ["tencent-models"]
+    }
+  ],
+  "promos": [
+    {
+      "tool": "Grok / SuperGrok",
+      "vendor": "xAI",
+      "title": "SuperGrok 7 天免费试用",
+      "body": "完整解锁 Grok 4.5+ 与 Grok Build 付费额度。需绑信用卡，务必在第 7 天前取消，否则按 $30/月 自动续费，仅限从未订阅过的新账号。",
+      "deadline": null,
+      "deadlineLabel": "官方未公布截止日期",
+      "url": "https://grok.com/plans",
+      "urlLabel": "grok.com/plans"
+    },
+    {
+      "tool": "CodeBuddy / WorkBuddy",
+      "vendor": "腾讯国内站",
+      "title": "2,000 积分新用户礼包 + 500 邀请积分",
+      "body": "通过邀请链接领取 2,000 积分礼包；受邀者 30 天内首次付费升级个人版，双方再各得 500 积分。需在截止日前完成注册并跑通一次对话或任务，积分有效期 1 个月。",
+      "deadline": "2026-11-30",
+      "deadlineLabel": "2026-11-30",
+      "url": "https://www.workbuddy.cn/events/invite?inviteCode=qm4gyc1daqn",
+      "urlLabel": "workbuddy.cn/events/invite"
+    }
+  ],
+  "expired": [
+    { "title": "GitHub Copilot 企业版 3,000 / 7,000 额度加成", "when": "2026-09-01", "note": "已恢复为 1,900 / 3,900" },
+    { "title": "OpenCode Go 4× 额度膨胀", "when": "2026-09-20", "note": "已由 Go 档常驻 $100/月额度取代" },
+    { "title": "OpenCode Go 首月 $5", "when": "2026-08-24", "note": "现仅 $10/月 一档" },
+    { "title": "Cursor 邀请首月 5 折", "when": "2026-07-23", "note": "邀请计划下线" },
+    { "title": "WorkBuddy HY3 全员免费", "when": "2026-07-22", "note": "免费期结束" },
+    { "title": "Devin GLM-5.2 / Kimi K2.7 免费期", "when": "2026-07-05", "note": "限时免费结束" },
+    { "title": "ZCode / GLM Coding Plan 1.5× 加成", "when": "2026-06-30", "note": "配额加成结束" },
+    { "title": "Kimi 一期邀请抽奖", "when": "2026-09 核实", "note": "活动已结束" }
+  ],
+  "students": [
+    { "tool": "Google Gemini & Antigravity", "benefit": "免费领 1 年 Google AI Pro 会员，解锁 Gemini Pro 及 Google Antigravity 完整高阶算力池", "url": "https://gemini.google/students", "urlLabel": "gemini.google/students" },
+    { "tool": "Zed Pro", "benefit": "免费领 1 年 Zed Pro，每月附赠约 $10 AI 模型调用额度", "url": "https://zed.dev", "urlLabel": "在客户端内认证" },
+    { "tool": "GitHub Copilot Pro", "benefit": "通过 GitHub Student Developer Pack 免费开通 Copilot Pro", "url": "https://education.github.com/pack", "urlLabel": "education.github.com/pack" },
+    { "tool": "JetBrains 全家桶", "benefit": "在读期间免费获取全系 JetBrains IDE 个人授权，含内置 AI 辅助功能", "url": "https://www.jetbrains.com/student/", "urlLabel": "jetbrains.com/student" },
+    { "tool": "Cursor", "benefit": "学生优惠原绑定旧版套餐；并入 The X Subscription 后是否延续，需以官网实时规则为准", "url": "https://cursor.com", "urlLabel": "cursor.com" }
+  ],
+  "matrix": [
+    { "profile": "零预算 / 纯本地隐私优先", "combo": "Freebuff + Aider / Cline + 本地 Ollama", "logic": "订阅支出为 $0；日常云端任务走 Freebuff 免费调 V4.1 Flash，核心敏感代码走本地 Ollama。" },
+    { "profile": "高频调用 DeepSeek V4.1 Flash", "combo": "Freebuff（免费）→ OpenCode Go（$10/月）", "logic": "先用 Freebuff 零成本摸底；需要稳定高配额与跨工具 API Key 时选 OpenCode Go——常驻 $100/月 Flash 额度，Go Plus 额度翻倍。" },
+    { "profile": "个人开发者 / $10 档稳健基座", "combo": "GitHub Copilot Pro（$10/月）", "logic": "大厂商业方案中月费最低，提供不限量行内补全、Next Edit 及每月 1,500 额度。" },
+    { "profile": "个人开发者 / 主力 Agentic IDE", "combo": "Cursor Premium（$30/月）或 Kiro Pro（$20/月）", "logic": "Cursor 交互手感与多模型生态最成熟；Kiro 主打规格驱动，且是 Amazon Q Developer 用户的顺滑迁入地。" },
+    { "profile": "重度架构重构 / 跨模块攻坚", "combo": "Cursor Premium（$30/月）+ Claude Code（$17–$20/月）", "logic": "双轨分工：Cursor 负责日常多文件编辑与秒级补全，遇到超大规模重构与疑难排障时切终端调用 Claude Code。" },
+    { "profile": "全栈 Web 与前端交互调试", "combo": "Google Antigravity（免费层 / $19.99 AI Pro）", "logic": "多 Agent 并行协同，内置浏览器沙箱可自动点击、截图并验证前端渲染结果。" },
+    { "profile": "已有 ChatGPT 免费版 / Plus 账号", "combo": "OpenAI Codex（桌面端 & CLI）", "logic": "零新增订阅费，直接激活账号内含的云端沙箱与本地终端 Agent 能力。" },
+    { "profile": "国内开发者 / 国产旗舰模型组合", "combo": "WorkBuddy + 腾讯云模型广场 + OpenCode Go / ClinePass", "logic": "先用邀请礼与 90 天百万 Token 池打磨 Kimi K3 与 V4.1 Flash，后续再按需接 $9.99 / $10 包月通道。" }
+  ],
+  "rules": [
+    { "title": "算清「模型消耗倍率」，别只看月费标价", "body": "$20/月往往只是入场券：Kiro 调用 Opus 4.8 的消耗倍率是 2.2×，而调用 Qwen3 Coder Next 仅 0.05×（相差 44 倍）；Copilot、Antigravity 与 Cursor 同样按模型档位扣减积分或算力池。" },
+    { "title": "按任务难度分级路由模型", "body": "行内补全、单测生成与常规 CRUD 固定绑定轻量高速模型（DeepSeek V4.1 Flash、GLM-5.3 Flash、Haiku、Gemini Flash）；仅在跨文件架构重构与深层逻辑排障时切换至 Opus、Sonnet 等高成本推理模型。" },
+    { "title": "吃透 DeepSeek V4.1 Flash 的错峰半价", "body": "日常编码优先走 Freebuff（免费）或 OpenCode Go（$10/月）；若直接调用官方按量 API，将批量生成与长上下文分析排在非高峰时段（避开周一至周五 UTC 01:00–04:00 与 06:00–10:00），Token 账单直接减半。" },
+    { "title": "用「开源外壳 + BYOK」解耦工具与模型锁定", "body": "采用 Aider、Cline、Continue.dev、OpenCode、Roo Code 等开源客户端，底层可随时切换至腾讯云模型广场、NVIDIA NIM 或本地 Ollama，彻底告别单一 IDE 涨价绑架。" },
+    { "title": "先串用新用户赠送额度，跑通真实项目再付费", "body": "决定包月前，先依次领取 WorkBuddy 的 2,000 邀请积分与新手任务积分、腾讯云模型广场的 90 天百万 Token、Codebuff 的 500 注册 credits 以及 SuperGrok 的 7 天免费试用。" },
+    { "title": "主力工具稳定后切年付锁价", "body": "经过 1 个月高强度实测确认留用的商业工具，从月付切换至年付可直接砍掉 15%–20% 常规预算。" },
+    { "title": "每季度做一次 15 分钟订阅复盘", "body": "AI 编程赛道的配额与模型代际每 60–90 天洗牌一次，上季度的付费主力很可能在本季度已有免费或十分之一价格的平替通道。" }
+  ],
+  "sources": [
+    { "label": "DeepSeek API 文档", "url": "https://api-docs.deepseek.com/" },
+    { "label": "DeepSeek 官方定价", "url": "https://api-docs.deepseek.com/quick_start/pricing" },
+    { "label": "DeepSeek V4.1 Flash 发布公告", "url": "https://api-docs.deepseek.com/news/news260910" },
+    { "label": "OpenCode Go 文档", "url": "https://opencode.ai/docs/go/" },
+    { "label": "ClinePass", "url": "https://cline.bot/cline-pass" },
+    { "label": "GitHub Copilot Changelog", "url": "https://github.blog/changelog/" },
+    { "label": "Cursor 邀请计划下线说明", "url": "https://forum.cursor.com/" },
+    { "label": "Amazon Q Developer 停服公告", "url": "https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/" }
+  ]
+}
